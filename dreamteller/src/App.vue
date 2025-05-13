@@ -10,13 +10,20 @@
               </router-link>
             </div>
             <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-              <router-link to="/" class="border-indigo-500 text-gray-900 dark:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              <router-link to="/" 
+                class="border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                active-class="border-indigo-500 text-gray-900 dark:text-white"
+                exact>
                 Home
               </router-link>
-              <router-link to="/create" class="border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              <router-link to="/create" 
+                class="border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                active-class="border-indigo-500 text-gray-900 dark:text-white">
                 Create Story
               </router-link>
-              <router-link to="/about" class="border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              <router-link to="/about" 
+                class="border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                active-class="border-indigo-500 text-gray-900 dark:text-white">
                 About
               </router-link>
             </div>
