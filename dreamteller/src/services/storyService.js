@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-const API_URL = process.env.VUE_APP_API_URL || 'http://localhost:8000/api'
+const API_URL = process.env.VUE_APP_API_URL || 'http://localhost:5000'
 
 export default {
   async generateStory(storyPrompt) {
     try {
-      const response = await axios.post(`${API_URL}/stories/generate`, storyPrompt)
+      const response = await axios.post(`${API_URL}/api/stories/generate`, storyPrompt)
       return response.data
     } catch (error) {
       console.error('Error generating story:', error)
@@ -15,7 +15,7 @@ export default {
   
   async regenerateSceneText(prompt, currentText, sceneIndex) {
     try {
-      const response = await axios.post(`${API_URL}/stories/regenerate-text`, {
+      const response = await axios.post(`${API_URL}/api/stories/regenerate-text`, {
         prompt,
         currentText,
         sceneIndex
@@ -29,7 +29,7 @@ export default {
   
   async getStories() {
     try {
-      const response = await axios.get(`${API_URL}/stories`)
+      const response = await axios.get(`${API_URL}/api/stories`)
       return response.data
     } catch (error) {
       console.error('Error fetching stories:', error)
