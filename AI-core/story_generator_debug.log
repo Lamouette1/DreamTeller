@@ -1,844 +1,411 @@
-2025-05-13 16:26:20,698 - DEBUG - Debug mode enabled - Writing logs to story_generator_debug.log
-2025-05-13 16:26:20,987 - DEBUG - === APPLICATION STARTED ===
-2025-05-13 16:26:20,987 - DEBUG - Screen dimensions: 1200x900
-2025-05-13 16:26:20,987 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
-2025-05-13 16:28:09,555 - DEBUG - === GENERATION STARTED FROM BUTTON CLICK ===
-2025-05-13 16:28:09,556 - DEBUG - User prompt: 'George is back to the dinosor's age and he must kill 1000 t rex to get back in his timeline and he succeds'
-2025-05-13 16:28:09,557 - DEBUG - === STARTING STORY GENERATION ===
-2025-05-13 16:28:09,560 - DEBUG - User prompt: 'George is back to the dinosor's age and he must kill 1000 t rex to get back in his timeline and he succeds'
-2025-05-13 16:28:09,560 - DEBUG - Sending prompt to Llama 3: 
-            Create a 3-scene picture story based on this prompt: "George is back to the dinosor's a...
-2025-05-13 16:28:09,563 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
-2025-05-13 16:28:09,568 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7662381442d0>
-2025-05-13 16:28:09,568 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:28:09,569 - DEBUG - send_request_headers.complete
-2025-05-13 16:28:09,570 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:28:09,571 - DEBUG - send_request_body.complete
-2025-05-13 16:28:09,571 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:30:30,969 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Tue, 13 May 2025 14:30:30 GMT'), (b'Content-Length', b'1968')])
-2025-05-13 16:30:30,969 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
-2025-05-13 16:30:30,969 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:30:30,970 - DEBUG - receive_response_body.complete
-2025-05-13 16:30:30,970 - DEBUG - response_closed.started
-2025-05-13 16:30:30,970 - DEBUG - response_closed.complete
-2025-05-13 16:30:30,970 - DEBUG - === RAW STORY RESPONSE ===
+2025-05-14 17:18:11,490 - DEBUG - Debug mode enabled - Writing logs to story_generator_debug.log
+2025-05-14 17:18:11,842 - DEBUG - === APPLICATION STARTED ===
+2025-05-14 17:18:11,842 - DEBUG - Screen dimensions: 1200x900
+2025-05-14 17:18:11,842 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
+2025-05-14 17:18:11,842 - DEBUG - Default number of scenes: 3
+2025-05-14 17:19:31,956 - DEBUG - === APPLICATION CLOSING ===
+2025-05-14 17:19:39,302 - DEBUG - Debug mode enabled - Writing logs to story_generator_debug.log
+2025-05-14 17:19:39,558 - DEBUG - === APPLICATION STARTED ===
+2025-05-14 17:19:39,558 - DEBUG - Screen dimensions: 1200x900
+2025-05-14 17:19:39,558 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
+2025-05-14 17:19:39,559 - DEBUG - Default number of scenes: 3
+2025-05-14 17:20:17,281 - DEBUG - === GENERATION STARTED ===
+2025-05-14 17:20:17,281 - DEBUG - User prompt: 'create a story about a men trying to get money by selling old stuff'
+2025-05-14 17:20:17,282 - DEBUG - Number of scenes: 3
+2025-05-14 17:20:17,283 - DEBUG - === STARTING STORY TEXT GENERATION ===
+2025-05-14 17:20:17,286 - DEBUG - User prompt: 'create a story about a men trying to get money by selling old stuff'
+2025-05-14 17:20:17,287 - DEBUG - Requested scenes: 3
+2025-05-14 17:20:17,287 - DEBUG - Sending prompt to Llama 3: Create a 3-scene picture story based on this prompt: "create a story about a men trying to get money...
+2025-05-14 17:20:17,291 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2025-05-14 17:20:17,297 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x789d98916490>
+2025-05-14 17:20:17,298 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-14 17:20:17,299 - DEBUG - send_request_headers.complete
+2025-05-14 17:20:17,299 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-14 17:20:17,300 - DEBUG - send_request_body.complete
+2025-05-14 17:20:17,300 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-14 17:22:33,700 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Wed, 14 May 2025 15:22:33 GMT'), (b'Content-Length', b'2020')])
+2025-05-14 17:22:33,701 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-05-14 17:22:33,701 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-14 17:22:33,702 - DEBUG - receive_response_body.complete
+2025-05-14 17:22:33,702 - DEBUG - response_closed.started
+2025-05-14 17:22:33,702 - DEBUG - response_closed.complete
+2025-05-14 17:22:33,702 - DEBUG - === RAW STORY RESPONSE ===
 Here is a 3-scene picture story based on the prompt:
 
 SCENE 1:
-George finds himself standing in the middle of a lush, prehistoric forest, surrounded by towering ferns and cycads. The air is thick with mist, and the sound of rushing water fills his ears. In the distance, he sees a massive T-Rex emerging from the trees, its eyes fixed on him with primal hunger. George's heart races as he assesses the situation - he knows that to get back to his own timeline, he needs to kill 1000 T-Rex. He takes a deep breath, readies himself, and prepares for battle.
+The sun rises over the cluttered garage of Jack's old family home, casting a warm glow over piles of forgotten treasures. Jack, a worn-out backpack slung over his shoulder, surveys the landscape with a mixture of nostalgia and desperation. His eyes land on an old vinyl record player, dusty and silent for years, but still holding memories of late-night jam sessions with friends. With a determined glint in his eye, Jack grabs the record player, along with a stack of vintage records, and slings them into a makeshift crate.
 
 SCENE 2:
-As the days turn into weeks, George becomes a one-man killing machine, stalking through the ancient landscape in search of his next victim. His clothes are tattered and stained, his hair is matted with dirt, but his determination remains unwavering. He takes down T-Rex after T-Rex, each battle more intense than the last. The forest floor becomes a graveyard of dinosaur bones, and George's tally grows ever closer to 1000.
+As the day wears on, Jack sets up shop at the local flea market, surrounded by rows of vibrant stalls selling everything from handmade jewelry to salvaged appliances. Jack's crate is now proudly displayed, adorned with hand-scrawled signs proclaiming "Vintage Vinyl Revival!" and "Collectible Records Galore!" The air is thick with the smell of coffee and greasepaint as shoppers browse the wares. A curious customer, eyes scanning the offerings, picks up a rare 1970s album and examines it with interest.
 
 SCENE 3:
-Finally, the day arrives when George stands victorious over his 1000th T-Rex kill. Exhausted but triumphant, he gazes out at the desolate landscape, knowing that he has fulfilled his quest. As the sun sets on this ancient era, George feels a strange sensation - a tingling in his fingers and toes, followed by a warm glow spreading through his body. He looks down to see his clothes transforming back into their modern form, his hair growing neat and tidy once more. With a satisfied smile, he steps forward, ready to return to his own timeline, armed with the knowledge that even the most impossible feats can be achieved with determination and strength.
+As the sun begins to set on the flea market, Jack's crate has been transformed into a treasure trove of sold goods. Records are stacked haphazardly, their sleeves crumpled from repeated handling. A small pile of cash clings to the edge of the crate, growing steadily as customers continue to browse and buy. Jack, sweat-drenched but triumphant, tallies his earnings with a worn-out calculator, a satisfied smile spreading across his face. The vinyl record player, now sold for a handsome sum, sits proudly in the center of the crate, a symbol of Jack's determination to turn old into gold.
 === END RAW RESPONSE ===
-2025-05-13 16:30:30,970 - DEBUG - Starting to parse scenes from response...
-2025-05-13 16:30:30,970 - DEBUG - Parsing line: 'Here is a 3-scene picture story based on the promp...' if longer
-2025-05-13 16:30:30,970 - DEBUG - Parsing line: '...' if longer
-2025-05-13 16:30:30,970 - DEBUG - Parsing line: 'SCENE 1:...' if longer
-2025-05-13 16:30:30,970 - DEBUG - Found scene marker: 'SCENE 1:'
-2025-05-13 16:30:30,970 - DEBUG - Parsing line: 'George finds himself standing in the middle of a l...' if longer
-2025-05-13 16:30:30,970 - DEBUG - Parsing line: '...' if longer
-2025-05-13 16:30:30,970 - DEBUG - Parsing line: 'SCENE 2:...' if longer
-2025-05-13 16:30:30,970 - DEBUG - Found scene marker: 'SCENE 2:'
-2025-05-13 16:30:30,970 - DEBUG - Adding previous scene: ' George finds himself standing in the middle of a ...'
-2025-05-13 16:30:30,971 - DEBUG - Parsing line: 'As the days turn into weeks, George becomes a one-...' if longer
-2025-05-13 16:30:30,971 - DEBUG - Parsing line: '...' if longer
-2025-05-13 16:30:30,971 - DEBUG - Parsing line: 'SCENE 3:...' if longer
-2025-05-13 16:30:30,971 - DEBUG - Found scene marker: 'SCENE 3:'
-2025-05-13 16:30:30,971 - DEBUG - Adding previous scene: ' As the days turn into weeks, George becomes a one...'
-2025-05-13 16:30:30,971 - DEBUG - Parsing line: 'Finally, the day arrives when George stands victor...' if longer
-2025-05-13 16:30:30,971 - DEBUG - Adding final scene: ' Finally, the day arrives when George stands victo...'
-2025-05-13 16:30:30,971 - DEBUG - === PARSED SCENES ===
-2025-05-13 16:30:30,971 - DEBUG - Scene 1: George finds himself standing in the middle of a lush, prehistoric forest, surrounded by towering fe...
-2025-05-13 16:30:30,971 - DEBUG - Scene 2: As the days turn into weeks, George becomes a one-man killing machine, stalking through the ancient ...
-2025-05-13 16:30:30,971 - DEBUG - Scene 3: Finally, the day arrives when George stands victorious over his 1000th T-Rex kill. Exhausted but tri...
-2025-05-13 16:30:30,971 - DEBUG - === STARTING IMAGE GENERATION FOR SCENE 1 ===
-2025-05-13 16:30:30,971 - DEBUG - Scene text: George finds himself standing in the middle of a lush, prehistoric forest, surrounded by towering ferns and cycads. The air is thick with mist, and the sound of rushing water fills his ears. In the distance, he sees a massive T-Rex emerging from the trees, its eyes fixed on him with primal hunger. George's heart races as he assesses the situation - he knows that to get back to his own timeline, he needs to kill 1000 T-Rex. He takes a deep breath, readies himself, and prepares for battle.
-2025-05-13 16:30:30,971 - DEBUG - Creating optimized image prompt using Llama 3
-2025-05-13 16:30:30,972 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:30:30,972 - DEBUG - send_request_headers.complete
-2025-05-13 16:30:30,972 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:30:30,972 - DEBUG - send_request_body.complete
-2025-05-13 16:30:30,972 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:31:45,747 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Tue, 13 May 2025 14:31:45 GMT'), (b'Content-Length', b'960')])
-2025-05-13 16:31:45,747 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
-2025-05-13 16:31:45,747 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:31:45,748 - DEBUG - receive_response_body.complete
-2025-05-13 16:31:45,748 - DEBUG - response_closed.started
-2025-05-13 16:31:45,748 - DEBUG - response_closed.complete
-2025-05-13 16:31:45,748 - DEBUG - Generated image prompt: Here is a clear and detailed image prompt based on the scene description:
+2025-05-14 17:22:33,702 - DEBUG - Starting to parse scenes from response...
+2025-05-14 17:22:33,702 - DEBUG - Parsing line: 'Here is a 3-scene picture story based on the promp...' if longer
+2025-05-14 17:22:33,702 - DEBUG - Parsing line: '...' if longer
+2025-05-14 17:22:33,702 - DEBUG - Parsing line: 'SCENE 1:...' if longer
+2025-05-14 17:22:33,702 - DEBUG - Found scene marker: 'SCENE 1:'
+2025-05-14 17:22:33,702 - DEBUG - Parsing line: 'The sun rises over the cluttered garage of Jack's ...' if longer
+2025-05-14 17:22:33,702 - DEBUG - Parsing line: '...' if longer
+2025-05-14 17:22:33,702 - DEBUG - Parsing line: 'SCENE 2:...' if longer
+2025-05-14 17:22:33,703 - DEBUG - Found scene marker: 'SCENE 2:'
+2025-05-14 17:22:33,703 - DEBUG - Adding previous scene: ' The sun rises over the cluttered garage of Jack's...'
+2025-05-14 17:22:33,703 - DEBUG - Parsing line: 'As the day wears on, Jack sets up shop at the loca...' if longer
+2025-05-14 17:22:33,703 - DEBUG - Parsing line: '...' if longer
+2025-05-14 17:22:33,703 - DEBUG - Parsing line: 'SCENE 3:...' if longer
+2025-05-14 17:22:33,703 - DEBUG - Found scene marker: 'SCENE 3:'
+2025-05-14 17:22:33,703 - DEBUG - Adding previous scene: ' As the day wears on, Jack sets up shop at the loc...'
+2025-05-14 17:22:33,703 - DEBUG - Parsing line: 'As the sun begins to set on the flea market, Jack'...' if longer
+2025-05-14 17:22:33,703 - DEBUG - Adding final scene: ' As the sun begins to set on the flea market, Jack...'
+2025-05-14 17:22:33,703 - DEBUG - === PARSED SCENES ===
+2025-05-14 17:22:33,703 - DEBUG - Scene 1: The sun rises over the cluttered garage of Jack's old family home, casting a warm glow over piles of...
+2025-05-14 17:22:33,703 - DEBUG - Scene 2: As the day wears on, Jack sets up shop at the local flea market, surrounded by rows of vibrant stall...
+2025-05-14 17:22:33,703 - DEBUG - Scene 3: As the sun begins to set on the flea market, Jack's crate has been transformed into a treasure trove...
+2025-05-14 17:22:33,703 - DEBUG - === STARTING IMAGE GENERATION FOR SCENE 1 ===
+2025-05-14 17:22:33,703 - DEBUG - Scene text: The sun rises over the cluttered garage of Jack's old family home, casting a warm glow over piles of forgotten treasures. Jack, a worn-out backpack slung over his shoulder, surveys the landscape with a mixture of nostalgia and desperation. His eyes land on an old vinyl record player, dusty and silent for years, but still holding memories of late-night jam sessions with friends. With a determined glint in his eye, Jack grabs the record player, along with a stack of vintage records, and slings them into a makeshift crate.
+2025-05-14 17:22:33,703 - DEBUG - Creating optimized image prompt using Llama 3
+2025-05-14 17:22:33,704 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-14 17:22:33,704 - DEBUG - send_request_headers.complete
+2025-05-14 17:22:33,704 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-14 17:22:33,704 - DEBUG - send_request_body.complete
+2025-05-14 17:22:33,704 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-14 17:23:41,578 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Wed, 14 May 2025 15:23:41 GMT'), (b'Content-Length', b'928')])
+2025-05-14 17:23:41,578 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-05-14 17:23:41,578 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-14 17:23:41,579 - DEBUG - receive_response_body.complete
+2025-05-14 17:23:41,579 - DEBUG - response_closed.started
+2025-05-14 17:23:41,579 - DEBUG - response_closed.complete
+2025-05-14 17:23:41,579 - DEBUG - Generated image prompt: Here is a clear and detailed prompt for image generation:
 
-"Create an image of George standing in a dense, misty prehistoric forest filled with towering ferns and cycads. The atmosphere should be eerie and foreboding, with soft, diffused lighting casting long shadows. In the background, a massive Tyrannosaurus Rex emerges from the trees, its eyes fixed intently on George. Key objects to include: George's determined expression, his stance ready for battle, and the mist-shrouded forest floor. Colors should be muted greens, browns, and grays, with pops of earthy tones. The overall mood should convey a sense of tension and primordial fear."
-2025-05-13 16:31:45,748 - DEBUG - Calling FAL AI FLUX with prompt: Here is a clear and detailed image prompt based on the scene description:
+"Create an image of Jack's garage at sunrise. The sun rises over stacks of forgotten treasures, casting a warm golden light on the cluttered space. Focus on the nostalgic atmosphere, with worn-out boxes, old tools, and vintage items scattered about. Jack stands in the center, wearing a backpack slung over his shoulder, with a determined expression. Highlight the old vinyl record player, dusty but still holding memories, alongside a stack of vintage records. Capture the scene as Jack grabs the record player and stacks of records to place into a makeshift crate."
+2025-05-14 17:23:41,579 - DEBUG - Calling FAL AI FLUX with prompt: Here is a clear and detailed prompt for image generation:
 
-"Create an image of Georg...
-2025-05-13 16:31:45,748 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
-2025-05-13 16:31:45,799 - DEBUG - connect_tcp.started host='queue.fal.run' port=443 local_address=None timeout=120.0 socket_options=None
-2025-05-13 16:31:46,253 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x766238181bd0>
-2025-05-13 16:31:46,253 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7662381096d0> server_hostname='queue.fal.run' timeout=120.0
-2025-05-13 16:31:46,465 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x766238181c10>
-2025-05-13 16:31:46,466 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:31:46,466 - DEBUG - send_request_headers.complete
-2025-05-13 16:31:46,467 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:31:46,467 - DEBUG - send_request_body.complete
-2025-05-13 16:31:46,467 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:31:46,677 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:31:46 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'433'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:31:46,678 - INFO - HTTP Request: POST https://queue.fal.run/fal-ai/flux/schnell "HTTP/1.1 200 OK"
-2025-05-13 16:31:46,679 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:31:46,679 - DEBUG - receive_response_body.complete
-2025-05-13 16:31:46,679 - DEBUG - response_closed.started
-2025-05-13 16:31:46,680 - DEBUG - response_closed.complete
-2025-05-13 16:31:46,681 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:31:46,682 - DEBUG - send_request_headers.complete
-2025-05-13 16:31:46,682 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:31:46,683 - DEBUG - send_request_body.complete
-2025-05-13 16:31:46,683 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:31:46,916 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:31:46 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:31:46,917 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/754e6ef5-e5a6-4967-9d01-af5a3c96dd38/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:31:46,917 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:31:46,917 - DEBUG - receive_response_body.complete
-2025-05-13 16:31:46,917 - DEBUG - response_closed.started
-2025-05-13 16:31:46,917 - DEBUG - response_closed.complete
-2025-05-13 16:31:47,018 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:31:47,019 - DEBUG - send_request_headers.complete
-2025-05-13 16:31:47,019 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:31:47,019 - DEBUG - send_request_body.complete
-2025-05-13 16:31:47,019 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:31:47,376 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:31:47 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:31:47,377 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/754e6ef5-e5a6-4967-9d01-af5a3c96dd38/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:31:47,377 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:31:47,378 - DEBUG - receive_response_body.complete
-2025-05-13 16:31:47,378 - DEBUG - response_closed.started
-2025-05-13 16:31:47,379 - DEBUG - response_closed.complete
-2025-05-13 16:31:47,481 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:31:47,482 - DEBUG - send_request_headers.complete
-2025-05-13 16:31:47,483 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:31:47,483 - DEBUG - send_request_body.complete
-2025-05-13 16:31:47,484 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:31:47,686 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:31:47 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'447'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:31:47,686 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/754e6ef5-e5a6-4967-9d01-af5a3c96dd38/status?logs=true "HTTP/1.1 200 OK"
-2025-05-13 16:31:47,686 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:31:47,686 - DEBUG - receive_response_body.complete
-2025-05-13 16:31:47,686 - DEBUG - response_closed.started
-2025-05-13 16:31:47,686 - DEBUG - response_closed.complete
-2025-05-13 16:31:47,687 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:31:47,687 - DEBUG - send_request_headers.complete
-2025-05-13 16:31:47,687 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:31:47,687 - DEBUG - send_request_body.complete
-2025-05-13 16:31:47,687 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:31:47,863 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:31:47 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'449'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:31:47,864 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/754e6ef5-e5a6-4967-9d01-af5a3c96dd38/status?logs=false "HTTP/1.1 200 OK"
-2025-05-13 16:31:47,865 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:31:47,866 - DEBUG - receive_response_body.complete
-2025-05-13 16:31:47,866 - DEBUG - response_closed.started
-2025-05-13 16:31:47,866 - DEBUG - response_closed.complete
-2025-05-13 16:31:47,867 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:31:47,868 - DEBUG - send_request_headers.complete
-2025-05-13 16:31:47,869 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:31:47,869 - DEBUG - send_request_body.complete
-2025-05-13 16:31:47,869 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:31:47,989 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:31:47 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'891'), (b'Connection', b'keep-alive'), (b'x-fal-billable-units', b'1'), (b'X-Fal-Served-From', b'c9bbdf32-e41b-4ade-8342-9fa0004f576f'), (b'x-fal-request-id', b'754e6ef5-e5a6-4967-9d01-af5a3c96dd38'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:31:47,993 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/754e6ef5-e5a6-4967-9d01-af5a3c96dd38 "HTTP/1.1 200 OK"
-2025-05-13 16:31:47,995 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:31:47,996 - DEBUG - receive_response_body.complete
-2025-05-13 16:31:47,996 - DEBUG - response_closed.started
-2025-05-13 16:31:47,997 - DEBUG - response_closed.complete
-2025-05-13 16:31:47,997 - DEBUG - FAL AI response received:
-2025-05-13 16:31:47,998 - DEBUG - {
+"Create an image of Jack's garage at sunr...
+2025-05-14 17:23:41,579 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
+2025-05-14 17:23:41,634 - DEBUG - connect_tcp.started host='queue.fal.run' port=443 local_address=None timeout=120.0 socket_options=None
+2025-05-14 17:23:41,828 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x789d97d86d90>
+2025-05-14 17:23:41,828 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x789d97d01a30> server_hostname='queue.fal.run' timeout=120.0
+2025-05-14 17:23:41,989 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x789d97d86e50>
+2025-05-14 17:23:41,991 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-14 17:23:41,992 - DEBUG - send_request_headers.complete
+2025-05-14 17:23:41,992 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-14 17:23:41,993 - DEBUG - send_request_body.complete
+2025-05-14 17:23:41,993 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-14 17:23:42,118 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:23:42 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'433'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:23:42,119 - INFO - HTTP Request: POST https://queue.fal.run/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2025-05-14 17:23:42,119 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-14 17:23:42,120 - DEBUG - receive_response_body.complete
+2025-05-14 17:23:42,121 - DEBUG - response_closed.started
+2025-05-14 17:23:42,121 - DEBUG - response_closed.complete
+2025-05-14 17:23:42,123 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:23:42,124 - DEBUG - send_request_headers.complete
+2025-05-14 17:23:42,125 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:23:42,125 - DEBUG - send_request_body.complete
+2025-05-14 17:23:42,125 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:23:42,336 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Wed, 14 May 2025 15:23:42 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:23:42,337 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/fb7819bd-24bd-4823-a580-5172c9d54b0c/status?logs=true "HTTP/1.1 202 Accepted"
+2025-05-14 17:23:42,337 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:23:42,337 - DEBUG - receive_response_body.complete
+2025-05-14 17:23:42,337 - DEBUG - response_closed.started
+2025-05-14 17:23:42,337 - DEBUG - response_closed.complete
+2025-05-14 17:23:42,439 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:23:42,440 - DEBUG - send_request_headers.complete
+2025-05-14 17:23:42,440 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:23:42,441 - DEBUG - send_request_body.complete
+2025-05-14 17:23:42,441 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:23:42,624 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Wed, 14 May 2025 15:23:42 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:23:42,625 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/fb7819bd-24bd-4823-a580-5172c9d54b0c/status?logs=true "HTTP/1.1 202 Accepted"
+2025-05-14 17:23:42,626 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:23:42,626 - DEBUG - receive_response_body.complete
+2025-05-14 17:23:42,626 - DEBUG - response_closed.started
+2025-05-14 17:23:42,627 - DEBUG - response_closed.complete
+2025-05-14 17:23:42,730 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:23:42,731 - DEBUG - send_request_headers.complete
+2025-05-14 17:23:42,731 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:23:42,732 - DEBUG - send_request_body.complete
+2025-05-14 17:23:42,732 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:23:43,359 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:23:43 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'448'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:23:43,360 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/fb7819bd-24bd-4823-a580-5172c9d54b0c/status?logs=true "HTTP/1.1 200 OK"
+2025-05-14 17:23:43,361 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:23:43,361 - DEBUG - receive_response_body.complete
+2025-05-14 17:23:43,362 - DEBUG - response_closed.started
+2025-05-14 17:23:43,362 - DEBUG - response_closed.complete
+2025-05-14 17:23:43,363 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:23:43,364 - DEBUG - send_request_headers.complete
+2025-05-14 17:23:43,364 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:23:43,364 - DEBUG - send_request_body.complete
+2025-05-14 17:23:43,365 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:23:43,563 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:23:43 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'450'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:23:43,564 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/fb7819bd-24bd-4823-a580-5172c9d54b0c/status?logs=false "HTTP/1.1 200 OK"
+2025-05-14 17:23:43,565 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:23:43,565 - DEBUG - receive_response_body.complete
+2025-05-14 17:23:43,565 - DEBUG - response_closed.started
+2025-05-14 17:23:43,566 - DEBUG - response_closed.complete
+2025-05-14 17:23:43,567 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:23:43,567 - DEBUG - send_request_headers.complete
+2025-05-14 17:23:43,568 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:23:43,568 - DEBUG - send_request_body.complete
+2025-05-14 17:23:43,568 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:23:43,709 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:23:43 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'858'), (b'Connection', b'keep-alive'), (b'x-fal-billable-units', b'1'), (b'X-Fal-Served-From', b'2225ae54-695a-4dcf-9a4c-7e85e9d17e2d'), (b'x-fal-request-id', b'fb7819bd-24bd-4823-a580-5172c9d54b0c'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:23:43,710 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/fb7819bd-24bd-4823-a580-5172c9d54b0c "HTTP/1.1 200 OK"
+2025-05-14 17:23:43,711 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:23:43,711 - DEBUG - receive_response_body.complete
+2025-05-14 17:23:43,711 - DEBUG - response_closed.started
+2025-05-14 17:23:43,711 - DEBUG - response_closed.complete
+2025-05-14 17:23:43,712 - DEBUG - FAL AI response received:
+2025-05-14 17:23:43,712 - DEBUG - {
   "images": [
     {
-      "url": "https://v3.fal.media/files/panda/5wjAa6s11lPnhwheFxgT-.png",
+      "url": "https://v3.fal.media/files/tiger/2EpJ3aBc-YSKm8Wx_NgYY.png",
       "width": 592,
       "height": 592,
       "content_type": "image/jpeg"
     }
   ],
   "timings": {
-    "inference": 0.2194180558435619
+    "inference": 0.21100537292659283
   },
   "seed": 42,
   "has_nsfw_concepts": [
     false
   ],
-  "prompt": "Here is a clear and detailed image prompt based on the scene description:\n\n\"Create an image of George standing in a dense, misty prehistoric forest filled with towering ferns and cycads. The...
-2025-05-13 16:31:47,999 - DEBUG - Image URL: https://v3.fal.media/files/panda/5wjAa6s11lPnhwheFxgT-.png
-2025-05-13 16:31:47,999 - DEBUG - Downloading image...
-2025-05-13 16:31:50,708 - DEBUG - Converting image to Pygame surface
-2025-05-13 16:31:50,765 - DEBUG - Scaling image from 592x592 to 600x600
-2025-05-13 16:31:50,777 - DEBUG - Image 1 successfully loaded and converted
-2025-05-13 16:31:50,779 - DEBUG - === COMPLETED IMAGE GENERATION FOR SCENE 1 ===
-2025-05-13 16:31:50,780 - DEBUG - === STARTING IMAGE GENERATION FOR SCENE 2 ===
-2025-05-13 16:31:50,781 - DEBUG - Scene text: As the days turn into weeks, George becomes a one-man killing machine, stalking through the ancient landscape in search of his next victim. His clothes are tattered and stained, his hair is matted with dirt, but his determination remains unwavering. He takes down T-Rex after T-Rex, each battle more intense than the last. The forest floor becomes a graveyard of dinosaur bones, and George's tally grows ever closer to 1000.
-2025-05-13 16:31:50,782 - DEBUG - Creating optimized image prompt using Llama 3
-2025-05-13 16:31:50,786 - DEBUG - close.started
-2025-05-13 16:31:50,787 - DEBUG - close.complete
-2025-05-13 16:31:50,787 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
-2025-05-13 16:31:50,788 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x76623818d550>
-2025-05-13 16:31:50,788 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:31:50,789 - DEBUG - send_request_headers.complete
-2025-05-13 16:31:50,789 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:31:50,790 - DEBUG - send_request_body.complete
-2025-05-13 16:31:50,790 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:32:46,809 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Tue, 13 May 2025 14:32:46 GMT'), (b'Content-Length', b'954')])
-2025-05-13 16:32:46,809 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
-2025-05-13 16:32:46,809 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:32:46,809 - DEBUG - receive_response_body.complete
-2025-05-13 16:32:46,809 - DEBUG - response_closed.started
-2025-05-13 16:32:46,810 - DEBUG - response_closed.complete
-2025-05-13 16:32:46,810 - DEBUG - Generated image prompt: Here is a detailed prompt for image generation:
+  "prompt": "Here is a clear and detailed prompt for image generation:\n\n\"Create an image of Jack's garage at sunrise. The sun rises over stacks of forgotten treasures, casting a warm golden light on the...
+2025-05-14 17:23:43,712 - DEBUG - Image URL: https://v3.fal.media/files/tiger/2EpJ3aBc-YSKm8Wx_NgYY.png
+2025-05-14 17:23:43,712 - DEBUG - Downloading image...
+2025-05-14 17:23:45,835 - DEBUG - Image 1 successfully downloaded
+2025-05-14 17:23:45,836 - DEBUG - === COMPLETED IMAGE GENERATION FOR SCENE 1 ===
+2025-05-14 17:23:45,836 - DEBUG - === STARTING IMAGE GENERATION FOR SCENE 2 ===
+2025-05-14 17:23:45,837 - DEBUG - Scene text: As the day wears on, Jack sets up shop at the local flea market, surrounded by rows of vibrant stalls selling everything from handmade jewelry to salvaged appliances. Jack's crate is now proudly displayed, adorned with hand-scrawled signs proclaiming "Vintage Vinyl Revival!" and "Collectible Records Galore!" The air is thick with the smell of coffee and greasepaint as shoppers browse the wares. A curious customer, eyes scanning the offerings, picks up a rare 1970s album and examines it with interest.
+2025-05-14 17:23:45,837 - DEBUG - Creating optimized image prompt using Llama 3
+2025-05-14 17:23:45,839 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-14 17:23:45,839 - DEBUG - send_request_headers.complete
+2025-05-14 17:23:45,840 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-14 17:23:45,840 - DEBUG - send_request_body.complete
+2025-05-14 17:23:45,840 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-14 17:25:42,761 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Wed, 14 May 2025 15:25:42 GMT'), (b'Content-Length', b'993')])
+2025-05-14 17:25:42,762 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-05-14 17:25:42,762 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-14 17:25:42,763 - DEBUG - receive_response_body.complete
+2025-05-14 17:25:42,764 - DEBUG - response_closed.started
+2025-05-14 17:25:42,764 - DEBUG - response_closed.complete
+2025-05-14 17:25:42,765 - DEBUG - Generated image prompt: Here's a concise and detailed prompt for image generation:
 
-"Create an image of George, a rugged and determined figure, standing amidst a desolate prehistoric landscape. The setting sun casts long shadows across the ancient forest floor, where a pile of dinosaur bones (T-Rex) lies scattered. George's tattered clothing and matted hair convey his worn state, but his eyes burn with determination. The atmosphere is dimly lit, with warm orange hues reflecting off the dusty terrain. In the background, hint at the eerie silence and vastness of the primordial landscape. Focus on capturing George's intense gaze and the gruesome yet awe-inspiring scene around him."
-2025-05-13 16:32:46,810 - DEBUG - Calling FAL AI FLUX with prompt: Here is a detailed prompt for image generation:
+"Create an illustration of a bustling flea market scene at daytime. Set against a warm, sunny sky with gentle cloud cover, the scene features rows of colorful stalls selling eclectic items. In the center, Jack's crate stands out with hand-scrawled signs ('Vintage Vinyl Revival!' and 'Collectible Records Galore!'). A curious customer examines a rare 1970s album on a stall shelf, surrounded by vibrant flowers or lush greenery. Incorporate the smells of coffee and greasepaint into the atmosphere through subtle visual cues (e.g., steam rising from a nearby cup). Use warm, inviting colors to capture the lively market ambiance."
+2025-05-14 17:25:42,765 - DEBUG - Calling FAL AI FLUX with prompt: Here's a concise and detailed prompt for image generation:
 
-"Create an image of George, a rugged and determined...
-2025-05-13 16:32:46,810 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
-2025-05-13 16:32:46,810 - DEBUG - close.started
-2025-05-13 16:32:46,810 - DEBUG - close.complete
-2025-05-13 16:32:46,811 - DEBUG - connect_tcp.started host='queue.fal.run' port=443 local_address=None timeout=120.0 socket_options=None
-2025-05-13 16:32:46,928 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x766238183590>
-2025-05-13 16:32:46,929 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7662381096d0> server_hostname='queue.fal.run' timeout=120.0
-2025-05-13 16:32:47,080 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x766238183d50>
-2025-05-13 16:32:47,081 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:32:47,082 - DEBUG - send_request_headers.complete
-2025-05-13 16:32:47,082 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:32:47,083 - DEBUG - send_request_body.complete
-2025-05-13 16:32:47,083 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:32:47,203 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:32:47 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'433'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:32:47,206 - INFO - HTTP Request: POST https://queue.fal.run/fal-ai/flux/schnell "HTTP/1.1 200 OK"
-2025-05-13 16:32:47,207 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:32:47,207 - DEBUG - receive_response_body.complete
-2025-05-13 16:32:47,208 - DEBUG - response_closed.started
-2025-05-13 16:32:47,208 - DEBUG - response_closed.complete
-2025-05-13 16:32:47,212 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:32:47,212 - DEBUG - send_request_headers.complete
-2025-05-13 16:32:47,213 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:32:47,214 - DEBUG - send_request_body.complete
-2025-05-13 16:32:47,215 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:32:47,422 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:32:47 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:32:47,422 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/6d123057-4741-4589-a4d8-5fbad3009817/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:32:47,423 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:32:47,423 - DEBUG - receive_response_body.complete
-2025-05-13 16:32:47,424 - DEBUG - response_closed.started
-2025-05-13 16:32:47,424 - DEBUG - response_closed.complete
-2025-05-13 16:32:47,525 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:32:47,526 - DEBUG - send_request_headers.complete
-2025-05-13 16:32:47,527 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:32:47,527 - DEBUG - send_request_body.complete
-2025-05-13 16:32:47,527 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:32:47,767 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:32:47 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:32:47,768 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/6d123057-4741-4589-a4d8-5fbad3009817/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:32:47,769 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:32:47,769 - DEBUG - receive_response_body.complete
-2025-05-13 16:32:47,770 - DEBUG - response_closed.started
-2025-05-13 16:32:47,770 - DEBUG - response_closed.complete
-2025-05-13 16:32:47,872 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:32:47,873 - DEBUG - send_request_headers.complete
-2025-05-13 16:32:47,875 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:32:47,876 - DEBUG - send_request_body.complete
-2025-05-13 16:32:47,877 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:32:48,201 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:32:48 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'448'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:32:48,202 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/6d123057-4741-4589-a4d8-5fbad3009817/status?logs=true "HTTP/1.1 200 OK"
-2025-05-13 16:32:48,204 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:32:48,204 - DEBUG - receive_response_body.complete
-2025-05-13 16:32:48,204 - DEBUG - response_closed.started
-2025-05-13 16:32:48,205 - DEBUG - response_closed.complete
-2025-05-13 16:32:48,206 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:32:48,207 - DEBUG - send_request_headers.complete
-2025-05-13 16:32:48,207 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:32:48,207 - DEBUG - send_request_body.complete
-2025-05-13 16:32:48,208 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:32:48,410 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:32:48 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'450'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:32:48,412 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/6d123057-4741-4589-a4d8-5fbad3009817/status?logs=false "HTTP/1.1 200 OK"
-2025-05-13 16:32:48,414 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:32:48,415 - DEBUG - receive_response_body.complete
-2025-05-13 16:32:48,416 - DEBUG - response_closed.started
-2025-05-13 16:32:48,418 - DEBUG - response_closed.complete
-2025-05-13 16:32:48,419 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:32:48,420 - DEBUG - send_request_headers.complete
-2025-05-13 16:32:48,420 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:32:48,420 - DEBUG - send_request_body.complete
-2025-05-13 16:32:48,421 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:32:48,554 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:32:48 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'884'), (b'Connection', b'keep-alive'), (b'x-fal-billable-units', b'1'), (b'X-Fal-Served-From', b'08c55f65-3776-424f-8fdf-e8cdf9f8557a'), (b'x-fal-request-id', b'6d123057-4741-4589-a4d8-5fbad3009817'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:32:48,556 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/6d123057-4741-4589-a4d8-5fbad3009817 "HTTP/1.1 200 OK"
-2025-05-13 16:32:48,557 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:32:48,558 - DEBUG - receive_response_body.complete
-2025-05-13 16:32:48,559 - DEBUG - response_closed.started
-2025-05-13 16:32:48,560 - DEBUG - response_closed.complete
-2025-05-13 16:32:48,560 - DEBUG - FAL AI response received:
-2025-05-13 16:32:48,563 - DEBUG - {
+"Create an illustration of a bustling fl...
+2025-05-14 17:25:42,765 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
+2025-05-14 17:25:42,767 - DEBUG - close.started
+2025-05-14 17:25:42,768 - DEBUG - close.complete
+2025-05-14 17:25:42,768 - DEBUG - connect_tcp.started host='queue.fal.run' port=443 local_address=None timeout=120.0 socket_options=None
+2025-05-14 17:25:42,976 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x789d97d94d50>
+2025-05-14 17:25:42,977 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x789d97d01a30> server_hostname='queue.fal.run' timeout=120.0
+2025-05-14 17:25:43,110 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x789d97d95210>
+2025-05-14 17:25:43,110 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-14 17:25:43,111 - DEBUG - send_request_headers.complete
+2025-05-14 17:25:43,112 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-14 17:25:43,112 - DEBUG - send_request_body.complete
+2025-05-14 17:25:43,113 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-14 17:25:43,242 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:25:43 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'433'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:25:43,244 - INFO - HTTP Request: POST https://queue.fal.run/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2025-05-14 17:25:43,245 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-14 17:25:43,246 - DEBUG - receive_response_body.complete
+2025-05-14 17:25:43,246 - DEBUG - response_closed.started
+2025-05-14 17:25:43,246 - DEBUG - response_closed.complete
+2025-05-14 17:25:43,248 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:25:43,249 - DEBUG - send_request_headers.complete
+2025-05-14 17:25:43,250 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:25:43,250 - DEBUG - send_request_body.complete
+2025-05-14 17:25:43,251 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:25:43,501 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Wed, 14 May 2025 15:25:43 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:25:43,508 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/65d6fb5d-c168-4c2d-8d11-0ba44e2ccd9d/status?logs=true "HTTP/1.1 202 Accepted"
+2025-05-14 17:25:43,509 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:25:43,510 - DEBUG - receive_response_body.complete
+2025-05-14 17:25:43,511 - DEBUG - response_closed.started
+2025-05-14 17:25:43,512 - DEBUG - response_closed.complete
+2025-05-14 17:25:43,613 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:25:43,614 - DEBUG - send_request_headers.complete
+2025-05-14 17:25:43,615 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:25:43,615 - DEBUG - send_request_body.complete
+2025-05-14 17:25:43,616 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:25:43,845 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Wed, 14 May 2025 15:25:43 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:25:43,846 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/65d6fb5d-c168-4c2d-8d11-0ba44e2ccd9d/status?logs=true "HTTP/1.1 202 Accepted"
+2025-05-14 17:25:43,847 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:25:43,848 - DEBUG - receive_response_body.complete
+2025-05-14 17:25:43,849 - DEBUG - response_closed.started
+2025-05-14 17:25:43,850 - DEBUG - response_closed.complete
+2025-05-14 17:25:43,953 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:25:43,956 - DEBUG - send_request_headers.complete
+2025-05-14 17:25:43,957 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:25:43,958 - DEBUG - send_request_body.complete
+2025-05-14 17:25:43,958 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:25:44,145 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:25:44 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'448'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:25:44,147 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/65d6fb5d-c168-4c2d-8d11-0ba44e2ccd9d/status?logs=true "HTTP/1.1 200 OK"
+2025-05-14 17:25:44,147 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:25:44,148 - DEBUG - receive_response_body.complete
+2025-05-14 17:25:44,149 - DEBUG - response_closed.started
+2025-05-14 17:25:44,149 - DEBUG - response_closed.complete
+2025-05-14 17:25:44,151 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:25:44,152 - DEBUG - send_request_headers.complete
+2025-05-14 17:25:44,160 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:25:44,161 - DEBUG - send_request_body.complete
+2025-05-14 17:25:44,161 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:25:44,295 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:25:44 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'450'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:25:44,297 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/65d6fb5d-c168-4c2d-8d11-0ba44e2ccd9d/status?logs=false "HTTP/1.1 200 OK"
+2025-05-14 17:25:44,297 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:25:44,299 - DEBUG - receive_response_body.complete
+2025-05-14 17:25:44,300 - DEBUG - response_closed.started
+2025-05-14 17:25:44,300 - DEBUG - response_closed.complete
+2025-05-14 17:25:44,302 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:25:44,303 - DEBUG - send_request_headers.complete
+2025-05-14 17:25:44,304 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:25:44,304 - DEBUG - send_request_body.complete
+2025-05-14 17:25:44,305 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:25:44,499 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:25:44 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'925'), (b'Connection', b'keep-alive'), (b'x-fal-billable-units', b'1'), (b'X-Fal-Served-From', b'2fa4ae58-f598-452f-a369-04bef712f99c'), (b'x-fal-request-id', b'65d6fb5d-c168-4c2d-8d11-0ba44e2ccd9d'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:25:44,501 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/65d6fb5d-c168-4c2d-8d11-0ba44e2ccd9d "HTTP/1.1 200 OK"
+2025-05-14 17:25:44,502 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:25:44,502 - DEBUG - receive_response_body.complete
+2025-05-14 17:25:44,503 - DEBUG - response_closed.started
+2025-05-14 17:25:44,503 - DEBUG - response_closed.complete
+2025-05-14 17:25:44,504 - DEBUG - FAL AI response received:
+2025-05-14 17:25:44,505 - DEBUG - {
   "images": [
     {
-      "url": "https://v3.fal.media/files/tiger/cdBxbD6b6xZjTNHTzBpSe.png",
+      "url": "https://v3.fal.media/files/elephant/PA5Oe0ZWVVLW4c7kaOr1V.png",
       "width": 592,
       "height": 592,
       "content_type": "image/jpeg"
     }
   ],
   "timings": {
-    "inference": 0.21089287401991896
+    "inference": 0.21328196674585342
   },
   "seed": 43,
   "has_nsfw_concepts": [
     false
   ],
-  "prompt": "Here is a detailed prompt for image generation:\n\n\"Create an image of George, a rugged and determined figure, standing amidst a desolate prehistoric landscape. The setting sun casts long sha...
-2025-05-13 16:32:48,563 - DEBUG - Image URL: https://v3.fal.media/files/tiger/cdBxbD6b6xZjTNHTzBpSe.png
-2025-05-13 16:32:48,563 - DEBUG - Downloading image...
-2025-05-13 16:32:50,963 - DEBUG - Converting image to Pygame surface
-2025-05-13 16:32:51,031 - DEBUG - Scaling image from 592x592 to 600x600
-2025-05-13 16:32:51,038 - DEBUG - Image 2 successfully loaded and converted
-2025-05-13 16:32:51,038 - DEBUG - === COMPLETED IMAGE GENERATION FOR SCENE 2 ===
-2025-05-13 16:32:51,039 - DEBUG - === STARTING IMAGE GENERATION FOR SCENE 3 ===
-2025-05-13 16:32:51,039 - DEBUG - Scene text: Finally, the day arrives when George stands victorious over his 1000th T-Rex kill. Exhausted but triumphant, he gazes out at the desolate landscape, knowing that he has fulfilled his quest. As the sun sets on this ancient era, George feels a strange sensation - a tingling in his fingers and toes, followed by a warm glow spreading through his body. He looks down to see his clothes transforming back into their modern form, his hair growing neat and tidy once more. With a satisfied smile, he steps forward, ready to return to his own timeline, armed with the knowledge that even the most impossible feats can be achieved with determination and strength.
-2025-05-13 16:32:51,039 - DEBUG - Creating optimized image prompt using Llama 3
-2025-05-13 16:32:51,041 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:32:51,042 - DEBUG - send_request_headers.complete
-2025-05-13 16:32:51,043 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:32:51,043 - DEBUG - send_request_body.complete
-2025-05-13 16:32:51,044 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:34:04,514 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Tue, 13 May 2025 14:34:04 GMT'), (b'Content-Length', b'1040')])
-2025-05-13 16:34:04,515 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
-2025-05-13 16:34:04,515 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:34:04,515 - DEBUG - receive_response_body.complete
-2025-05-13 16:34:04,515 - DEBUG - response_closed.started
-2025-05-13 16:34:04,515 - DEBUG - response_closed.complete
-2025-05-13 16:34:04,515 - DEBUG - Generated image prompt: Here is a clear and detailed prompt for image generation:
+  "prompt": "Here's a concise and detailed prompt for image generation:\n\n\"Create an illustration of a bustling flea market scene at daytime. Set against a warm, sunny sky with gentle cloud cover, the...
+2025-05-14 17:25:44,505 - DEBUG - Image URL: https://v3.fal.media/files/elephant/PA5Oe0ZWVVLW4c7kaOr1V.png
+2025-05-14 17:25:44,505 - DEBUG - Downloading image...
+2025-05-14 17:25:47,130 - DEBUG - Image 2 successfully downloaded
+2025-05-14 17:25:47,132 - DEBUG - === COMPLETED IMAGE GENERATION FOR SCENE 2 ===
+2025-05-14 17:25:47,132 - DEBUG - === STARTING IMAGE GENERATION FOR SCENE 3 ===
+2025-05-14 17:25:47,133 - DEBUG - Scene text: As the sun begins to set on the flea market, Jack's crate has been transformed into a treasure trove of sold goods. Records are stacked haphazardly, their sleeves crumpled from repeated handling. A small pile of cash clings to the edge of the crate, growing steadily as customers continue to browse and buy. Jack, sweat-drenched but triumphant, tallies his earnings with a worn-out calculator, a satisfied smile spreading across his face. The vinyl record player, now sold for a handsome sum, sits proudly in the center of the crate, a symbol of Jack's determination to turn old into gold.
+2025-05-14 17:25:47,133 - DEBUG - Creating optimized image prompt using Llama 3
+2025-05-14 17:25:47,135 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-14 17:25:47,135 - DEBUG - send_request_headers.complete
+2025-05-14 17:25:47,136 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-14 17:25:47,136 - DEBUG - send_request_body.complete
+2025-05-14 17:25:47,137 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-14 17:30:50,214 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Wed, 14 May 2025 15:30:50 GMT'), (b'Content-Length', b'1010')])
+2025-05-14 17:30:50,214 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-05-14 17:30:50,215 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-14 17:30:50,216 - DEBUG - receive_response_body.complete
+2025-05-14 17:30:50,217 - DEBUG - response_closed.started
+2025-05-14 17:30:50,217 - DEBUG - response_closed.complete
+2025-05-14 17:30:50,218 - DEBUG - Generated image prompt: Here is the rewritten prompt:
 
-"Generate an image of George standing triumphantly over the defeated 1000th T-Rex, set against a desolate, ancient landscape at sunset. Key objects: T-Rex skeleton, ancient plants, rocky terrain. Lighting: Warm orange-red hues from the setting sun, with long shadows stretching across the ground. Colors: Earthy tones (browns, tans, greens) with pops of fiery red and orange from the sky. Perspective: Over-the-shoulder view showing George's victorious expression and modern clothing (hair neat, clothes transformed). Additional details: Tingle in fingers and toes, warm glow spreading through body, satisfied smile on George's face as he prepares to return to his own timeline."
-2025-05-13 16:34:04,515 - DEBUG - Calling FAL AI FLUX with prompt: Here is a clear and detailed prompt for image generation:
+"Generate an image of a vibrant flea market scene at sunset. Focus on Jack's crate, transformed into a treasure trove of sold goods. The crate should be surrounded by a warm, golden light with long shadows cast across the surrounding stalls. Records are stacked haphazardly, with crumpled sleeves and a small pile of cash growing on the edge. Jack, sweat-drenched but triumphant, should be standing in front of the crate, holding a worn-out calculator and sporting a satisfied smile. The vinyl record player should sit proudly at center-stage, with a few sold records surrounding it. Incorporate rich, earthy tones and bold colors to capture the market's lively atmosphere."
+2025-05-14 17:30:50,218 - DEBUG - Calling FAL AI FLUX with prompt: Here is the rewritten prompt:
 
-"Generate an image of George standing tri...
-2025-05-13 16:34:04,515 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
-2025-05-13 16:34:04,516 - DEBUG - close.started
-2025-05-13 16:34:04,516 - DEBUG - close.complete
-2025-05-13 16:34:04,516 - DEBUG - connect_tcp.started host='queue.fal.run' port=443 local_address=None timeout=120.0 socket_options=None
-2025-05-13 16:34:04,664 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x76623819b990>
-2025-05-13 16:34:04,665 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7662381096d0> server_hostname='queue.fal.run' timeout=120.0
-2025-05-13 16:34:04,802 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x76623819ba50>
-2025-05-13 16:34:04,803 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:34:04,803 - DEBUG - send_request_headers.complete
-2025-05-13 16:34:04,804 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:34:04,804 - DEBUG - send_request_body.complete
-2025-05-13 16:34:04,804 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:34:05,003 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:34:04 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'433'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:34:05,003 - INFO - HTTP Request: POST https://queue.fal.run/fal-ai/flux/schnell "HTTP/1.1 200 OK"
-2025-05-13 16:34:05,004 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:34:05,004 - DEBUG - receive_response_body.complete
-2025-05-13 16:34:05,004 - DEBUG - response_closed.started
-2025-05-13 16:34:05,004 - DEBUG - response_closed.complete
-2025-05-13 16:34:05,005 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:34:05,006 - DEBUG - send_request_headers.complete
-2025-05-13 16:34:05,006 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:34:05,006 - DEBUG - send_request_body.complete
-2025-05-13 16:34:05,006 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:34:05,205 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:34:05 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:34:05,206 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/88367529-ba87-4c4c-8a64-76120402d786/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:34:05,206 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:34:05,207 - DEBUG - receive_response_body.complete
-2025-05-13 16:34:05,207 - DEBUG - response_closed.started
-2025-05-13 16:34:05,208 - DEBUG - response_closed.complete
-2025-05-13 16:34:05,309 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:34:05,309 - DEBUG - send_request_headers.complete
-2025-05-13 16:34:05,309 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:34:05,309 - DEBUG - send_request_body.complete
-2025-05-13 16:34:05,309 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:34:05,740 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:34:05 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:34:05,740 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/88367529-ba87-4c4c-8a64-76120402d786/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:34:05,741 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:34:05,741 - DEBUG - receive_response_body.complete
-2025-05-13 16:34:05,741 - DEBUG - response_closed.started
-2025-05-13 16:34:05,741 - DEBUG - response_closed.complete
-2025-05-13 16:34:05,844 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:34:05,846 - DEBUG - send_request_headers.complete
-2025-05-13 16:34:05,848 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:34:05,849 - DEBUG - send_request_body.complete
-2025-05-13 16:34:05,850 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:34:06,108 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:34:06 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'448'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:34:06,108 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/88367529-ba87-4c4c-8a64-76120402d786/status?logs=true "HTTP/1.1 200 OK"
-2025-05-13 16:34:06,109 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:34:06,109 - DEBUG - receive_response_body.complete
-2025-05-13 16:34:06,110 - DEBUG - response_closed.started
-2025-05-13 16:34:06,110 - DEBUG - response_closed.complete
-2025-05-13 16:34:06,111 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:34:06,112 - DEBUG - send_request_headers.complete
-2025-05-13 16:34:06,112 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:34:06,112 - DEBUG - send_request_body.complete
-2025-05-13 16:34:06,112 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:34:06,234 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:34:06 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'450'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:34:06,235 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/88367529-ba87-4c4c-8a64-76120402d786/status?logs=false "HTTP/1.1 200 OK"
-2025-05-13 16:34:06,235 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:34:06,236 - DEBUG - receive_response_body.complete
-2025-05-13 16:34:06,236 - DEBUG - response_closed.started
-2025-05-13 16:34:06,236 - DEBUG - response_closed.complete
-2025-05-13 16:34:06,238 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:34:06,238 - DEBUG - send_request_headers.complete
-2025-05-13 16:34:06,239 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:34:06,239 - DEBUG - send_request_body.complete
-2025-05-13 16:34:06,239 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:34:06,358 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:34:06 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'970'), (b'Connection', b'keep-alive'), (b'x-fal-billable-units', b'1'), (b'X-Fal-Served-From', b'819c35c4-cfbf-4e7a-988f-209e7d3865a6'), (b'x-fal-request-id', b'88367529-ba87-4c4c-8a64-76120402d786'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:34:06,360 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/88367529-ba87-4c4c-8a64-76120402d786 "HTTP/1.1 200 OK"
-2025-05-13 16:34:06,362 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:34:06,363 - DEBUG - receive_response_body.complete
-2025-05-13 16:34:06,363 - DEBUG - response_closed.started
-2025-05-13 16:34:06,368 - DEBUG - response_closed.complete
-2025-05-13 16:34:06,370 - DEBUG - FAL AI response received:
-2025-05-13 16:34:06,371 - DEBUG - {
+"Generate an image of a vibrant flea market scene at sunset. Focus on...
+2025-05-14 17:30:50,218 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
+2025-05-14 17:30:50,219 - DEBUG - close.started
+2025-05-14 17:30:50,220 - DEBUG - close.complete
+2025-05-14 17:30:50,222 - DEBUG - connect_tcp.started host='queue.fal.run' port=443 local_address=None timeout=120.0 socket_options=None
+2025-05-14 17:30:50,373 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x789d97d9fb90>
+2025-05-14 17:30:50,373 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x789d97d01a30> server_hostname='queue.fal.run' timeout=120.0
+2025-05-14 17:30:50,586 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x789d97d9fbd0>
+2025-05-14 17:30:50,587 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-14 17:30:50,588 - DEBUG - send_request_headers.complete
+2025-05-14 17:30:50,588 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-14 17:30:50,589 - DEBUG - send_request_body.complete
+2025-05-14 17:30:50,589 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-14 17:30:50,788 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:30:50 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'433'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:30:50,792 - INFO - HTTP Request: POST https://queue.fal.run/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2025-05-14 17:30:50,795 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-14 17:30:50,796 - DEBUG - receive_response_body.complete
+2025-05-14 17:30:50,796 - DEBUG - response_closed.started
+2025-05-14 17:30:50,797 - DEBUG - response_closed.complete
+2025-05-14 17:30:50,799 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:30:50,801 - DEBUG - send_request_headers.complete
+2025-05-14 17:30:50,801 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:30:50,802 - DEBUG - send_request_body.complete
+2025-05-14 17:30:50,803 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:30:51,002 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Wed, 14 May 2025 15:30:50 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:30:51,003 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/59ddd38f-8d2f-43fc-9394-ff12e5fb161a/status?logs=true "HTTP/1.1 202 Accepted"
+2025-05-14 17:30:51,004 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:30:51,005 - DEBUG - receive_response_body.complete
+2025-05-14 17:30:51,006 - DEBUG - response_closed.started
+2025-05-14 17:30:51,006 - DEBUG - response_closed.complete
+2025-05-14 17:30:51,113 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:30:51,117 - DEBUG - send_request_headers.complete
+2025-05-14 17:30:51,118 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:30:51,118 - DEBUG - send_request_body.complete
+2025-05-14 17:30:51,118 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:30:51,356 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Wed, 14 May 2025 15:30:51 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:30:51,357 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/59ddd38f-8d2f-43fc-9394-ff12e5fb161a/status?logs=true "HTTP/1.1 202 Accepted"
+2025-05-14 17:30:51,359 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:30:51,360 - DEBUG - receive_response_body.complete
+2025-05-14 17:30:51,361 - DEBUG - response_closed.started
+2025-05-14 17:30:51,361 - DEBUG - response_closed.complete
+2025-05-14 17:30:51,463 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:30:51,464 - DEBUG - send_request_headers.complete
+2025-05-14 17:30:51,465 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:30:51,465 - DEBUG - send_request_body.complete
+2025-05-14 17:30:51,466 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:30:51,775 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:30:51 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'447'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:30:51,777 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/59ddd38f-8d2f-43fc-9394-ff12e5fb161a/status?logs=true "HTTP/1.1 200 OK"
+2025-05-14 17:30:51,778 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:30:51,779 - DEBUG - receive_response_body.complete
+2025-05-14 17:30:51,779 - DEBUG - response_closed.started
+2025-05-14 17:30:51,780 - DEBUG - response_closed.complete
+2025-05-14 17:30:51,781 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:30:51,783 - DEBUG - send_request_headers.complete
+2025-05-14 17:30:51,783 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:30:51,784 - DEBUG - send_request_body.complete
+2025-05-14 17:30:51,784 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:30:51,935 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:30:51 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'449'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:30:51,938 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/59ddd38f-8d2f-43fc-9394-ff12e5fb161a/status?logs=false "HTTP/1.1 200 OK"
+2025-05-14 17:30:51,939 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:30:51,940 - DEBUG - receive_response_body.complete
+2025-05-14 17:30:51,941 - DEBUG - response_closed.started
+2025-05-14 17:30:51,942 - DEBUG - response_closed.complete
+2025-05-14 17:30:51,945 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-05-14 17:30:51,946 - DEBUG - send_request_headers.complete
+2025-05-14 17:30:51,946 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-05-14 17:30:51,948 - DEBUG - send_request_body.complete
+2025-05-14 17:30:51,949 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-05-14 17:30:52,081 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 14 May 2025 15:30:52 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'940'), (b'Connection', b'keep-alive'), (b'x-fal-billable-units', b'1'), (b'X-Fal-Served-From', b'1d07f7c1-7fb1-4ddc-8418-a36ff66c0570'), (b'x-fal-request-id', b'59ddd38f-8d2f-43fc-9394-ff12e5fb161a'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
+2025-05-14 17:30:52,084 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/59ddd38f-8d2f-43fc-9394-ff12e5fb161a "HTTP/1.1 200 OK"
+2025-05-14 17:30:52,084 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-05-14 17:30:52,085 - DEBUG - receive_response_body.complete
+2025-05-14 17:30:52,086 - DEBUG - response_closed.started
+2025-05-14 17:30:52,086 - DEBUG - response_closed.complete
+2025-05-14 17:30:52,087 - DEBUG - FAL AI response received:
+2025-05-14 17:30:52,087 - DEBUG - {
   "images": [
     {
-      "url": "https://v3.fal.media/files/zebra/PbFOaPUMD1joZ-FH2VFRN.png",
+      "url": "https://v3.fal.media/files/elephant/k3nb1dHDNKja5VGqEZRD2.png",
       "width": 592,
       "height": 592,
       "content_type": "image/jpeg"
     }
   ],
   "timings": {
-    "inference": 0.21570405131205916
+    "inference": 0.21608144510537386
   },
   "seed": 44,
   "has_nsfw_concepts": [
     false
   ],
-  "prompt": "Here is a clear and detailed prompt for image generation:\n\n\"Generate an image of George standing triumphantly over the defeated 1000th T-Rex, set against a desolate, ancient landscape at su...
-2025-05-13 16:34:06,375 - DEBUG - Image URL: https://v3.fal.media/files/zebra/PbFOaPUMD1joZ-FH2VFRN.png
-2025-05-13 16:34:06,376 - DEBUG - Downloading image...
-2025-05-13 16:34:08,884 - DEBUG - Converting image to Pygame surface
-2025-05-13 16:34:08,932 - DEBUG - Scaling image from 592x592 to 600x600
-2025-05-13 16:34:08,939 - DEBUG - Image 3 successfully loaded and converted
-2025-05-13 16:34:08,940 - DEBUG - === COMPLETED IMAGE GENERATION FOR SCENE 3 ===
-2025-05-13 16:34:08,940 - DEBUG - === STORY AND IMAGE GENERATION COMPLETE ===
-2025-05-13 16:34:30,944 - DEBUG - Navigation: Moving to page 2
-2025-05-13 16:34:42,057 - DEBUG - Navigation: Moving to page 3
-2025-05-13 16:35:31,090 - DEBUG - Navigation: Moving to page 2
-2025-05-13 16:35:31,098 - DEBUG - === VIEWING PAGE 2 ===
-2025-05-13 16:35:31,099 - DEBUG - Scene text: As the days turn into weeks, George becomes a one-man killing machine, stalking through the ancient ...
-2025-05-13 16:35:31,140 - DEBUG - === VIEWING PAGE 2 ===
-2025-05-13 16:35:31,141 - DEBUG - Scene text: As the days turn into weeks, George becomes a one-man killing machine, stalking through the ancient ...
-2025-05-13 16:35:31,168 - DEBUG - === VIEWING PAGE 2 ===
-2025-05-13 16:35:31,168 - DEBUG - Scene text: As the days turn into weeks, George becomes a one-man killing machine, stalking through the ancient ...
-2025-05-13 16:35:31,523 - DEBUG - Navigation: Moving to page 1
-2025-05-13 16:35:31,526 - DEBUG - === VIEWING PAGE 1 ===
-2025-05-13 16:35:31,527 - DEBUG - Scene text: George finds himself standing in the middle of a lush, prehistoric forest, surrounded by towering fe...
-2025-05-13 16:35:31,560 - DEBUG - === VIEWING PAGE 1 ===
-2025-05-13 16:35:31,560 - DEBUG - Scene text: George finds himself standing in the middle of a lush, prehistoric forest, surrounded by towering fe...
-2025-05-13 16:35:49,056 - DEBUG - === APPLICATION CLOSING ===
-2025-05-13 16:47:59,042 - DEBUG - Debug mode enabled - Writing logs to story_generator_debug.log
-2025-05-13 16:47:59,323 - DEBUG - === APPLICATION STARTED ===
-2025-05-13 16:47:59,323 - DEBUG - Screen dimensions: 1200x900
-2025-05-13 16:47:59,324 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
-2025-05-13 16:49:50,168 - DEBUG - === GENERATION STARTED FROM BUTTON CLICK ===
-2025-05-13 16:49:50,168 - DEBUG - User prompt: 'create a story about a knight slaying a dragon with a magic banana'
-2025-05-13 16:49:50,169 - DEBUG - === STARTING STORY GENERATION ===
-2025-05-13 16:49:50,172 - DEBUG - User prompt: 'create a story about a knight slaying a dragon with a magic banana'
-2025-05-13 16:49:50,173 - DEBUG - Sending prompt to Llama 3: 
-            Create a 3-scene picture story based on this prompt: "create a story about a knight sla...
-2025-05-13 16:49:50,176 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
-2025-05-13 16:49:50,179 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x76a9a89f25d0>
-2025-05-13 16:49:50,180 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:49:50,181 - DEBUG - send_request_headers.complete
-2025-05-13 16:49:50,181 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:49:50,182 - DEBUG - send_request_body.complete
-2025-05-13 16:49:50,182 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:51:58,762 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Tue, 13 May 2025 14:51:58 GMT'), (b'Content-Length', b'1813')])
-2025-05-13 16:51:58,763 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
-2025-05-13 16:51:58,763 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:51:58,763 - DEBUG - receive_response_body.complete
-2025-05-13 16:51:58,763 - DEBUG - response_closed.started
-2025-05-13 16:51:58,764 - DEBUG - response_closed.complete
-2025-05-13 16:51:58,764 - DEBUG - === RAW STORY RESPONSE ===
-Here is a 3-scene picture story based on the prompt:
-
-SCENE 1:
-The sun beats down upon the parched landscape as Sir Reginald, a gallant knight, approaches the lair of the dreaded dragon, Blaze. His trusty steed, Galahad, trots nervously beside him, sensing the trepidation in the air. In his hand, Sir Reginald clutches a peculiar object - a magic banana, imbued with ancient powers to vanquish even the most fearsome foes. As they draw near, the air grows thick with smoke and fire, signaling the dragon's presence.
-
-SCENE 2:
-Blaze emerges from the depths of the lair, its massive scales glinting like molten lava in the sunlight. The dragon's fiery breath illuminates the dark cavern behind it, revealing a hoard of glittering treasure and ancient artifacts. Sir Reginald draws his sword, its blade shimmering with a faint blue light as he prepares to face the beast. Blaze, sensing victory within its grasp, unleashes a deafening roar and charges forward, claws extended.
-
-SCENE 3:
-In a flash of banana-fueled magic, Sir Reginald leaps forth, banana held aloft like a sacred talisman. As the dragon's claws snap shut mere inches from his face, the knight raises the banana, channeling its energy into a blast of pure force. Blaze recoils, its scales crackling with electricity as it realizes too late that the magic banana has turned the tide of battle. With one final, mighty swing of his sword, Sir Reginald strikes the dragon's heart, ending its reign of terror and securing his place in legend.
-=== END RAW RESPONSE ===
-2025-05-13 16:51:58,764 - DEBUG - Starting to parse scenes from response...
-2025-05-13 16:51:58,764 - DEBUG - Parsing line: 'Here is a 3-scene picture story based on the promp...' if longer
-2025-05-13 16:51:58,764 - DEBUG - Parsing line: '...' if longer
-2025-05-13 16:51:58,764 - DEBUG - Parsing line: 'SCENE 1:...' if longer
-2025-05-13 16:51:58,764 - DEBUG - Found scene marker: 'SCENE 1:'
-2025-05-13 16:51:58,764 - DEBUG - Parsing line: 'The sun beats down upon the parched landscape as S...' if longer
-2025-05-13 16:51:58,764 - DEBUG - Parsing line: '...' if longer
-2025-05-13 16:51:58,764 - DEBUG - Parsing line: 'SCENE 2:...' if longer
-2025-05-13 16:51:58,765 - DEBUG - Found scene marker: 'SCENE 2:'
-2025-05-13 16:51:58,765 - DEBUG - Adding previous scene: ' The sun beats down upon the parched landscape as ...'
-2025-05-13 16:51:58,765 - DEBUG - Parsing line: 'Blaze emerges from the depths of the lair, its mas...' if longer
-2025-05-13 16:51:58,765 - DEBUG - Parsing line: '...' if longer
-2025-05-13 16:51:58,765 - DEBUG - Parsing line: 'SCENE 3:...' if longer
-2025-05-13 16:51:58,765 - DEBUG - Found scene marker: 'SCENE 3:'
-2025-05-13 16:51:58,765 - DEBUG - Adding previous scene: ' Blaze emerges from the depths of the lair, its ma...'
-2025-05-13 16:51:58,765 - DEBUG - Parsing line: 'In a flash of banana-fueled magic, Sir Reginald le...' if longer
-2025-05-13 16:51:58,765 - DEBUG - Adding final scene: ' In a flash of banana-fueled magic, Sir Reginald l...'
-2025-05-13 16:51:58,765 - DEBUG - === PARSED SCENES ===
-2025-05-13 16:51:58,765 - DEBUG - Scene 1: The sun beats down upon the parched landscape as Sir Reginald, a gallant knight, approaches the lair...
-2025-05-13 16:51:58,765 - DEBUG - Scene 2: Blaze emerges from the depths of the lair, its massive scales glinting like molten lava in the sunli...
-2025-05-13 16:51:58,765 - DEBUG - Scene 3: In a flash of banana-fueled magic, Sir Reginald leaps forth, banana held aloft like a sacred talisma...
-2025-05-13 16:51:58,765 - DEBUG - === STARTING IMAGE GENERATION FOR SCENE 1 ===
-2025-05-13 16:51:58,765 - DEBUG - Scene text: The sun beats down upon the parched landscape as Sir Reginald, a gallant knight, approaches the lair of the dreaded dragon, Blaze. His trusty steed, Galahad, trots nervously beside him, sensing the trepidation in the air. In his hand, Sir Reginald clutches a peculiar object - a magic banana, imbued with ancient powers to vanquish even the most fearsome foes. As they draw near, the air grows thick with smoke and fire, signaling the dragon's presence.
-2025-05-13 16:51:58,766 - DEBUG - Creating optimized image prompt using Llama 3
-2025-05-13 16:51:58,766 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:51:58,766 - DEBUG - send_request_headers.complete
-2025-05-13 16:51:58,766 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:51:58,767 - DEBUG - send_request_body.complete
-2025-05-13 16:51:58,767 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:53:11,670 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Tue, 13 May 2025 14:53:11 GMT'), (b'Content-Length', b'898')])
-2025-05-13 16:53:11,670 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
-2025-05-13 16:53:11,670 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:53:11,671 - DEBUG - receive_response_body.complete
-2025-05-13 16:53:11,671 - DEBUG - response_closed.started
-2025-05-13 16:53:11,671 - DEBUG - response_closed.complete
-2025-05-13 16:53:11,671 - DEBUG - Generated image prompt: Here is the converted prompt:
-
-"Generate an image of Sir Reginald, a gallant knight, riding Galahad, his trusty steed, as they approach the lair of the dreaded dragon Blaze. The scene should be set under scorching sunlight with a dry, parched landscape in the background. Sir Reginald should be holding a magic banana in his hand. Key visual elements to include: intense sunlight casting long shadows, wispy smoke and flames rising from the dragon's lair, and an air of trepidation palpable in Galahad's nervous trotting. Colors: warm desert hues with fiery orange and red tones from the flames."
-2025-05-13 16:53:11,671 - DEBUG - Calling FAL AI FLUX with prompt: Here is the converted prompt:
-
-"Generate an image of Sir Reginald, a gallant knight, riding Galahad,...
-2025-05-13 16:53:11,671 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
-2025-05-13 16:53:11,723 - DEBUG - connect_tcp.started host='queue.fal.run' port=443 local_address=None timeout=120.0 socket_options=None
-2025-05-13 16:53:11,887 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x76a9a2f89a50>
-2025-05-13 16:53:11,887 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x76a9a2f056d0> server_hostname='queue.fal.run' timeout=120.0
-2025-05-13 16:53:12,011 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x76a9a2f7a490>
-2025-05-13 16:53:12,012 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:53:12,012 - DEBUG - send_request_headers.complete
-2025-05-13 16:53:12,013 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:53:12,013 - DEBUG - send_request_body.complete
-2025-05-13 16:53:12,013 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:53:12,133 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:53:12 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'433'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:53:12,136 - INFO - HTTP Request: POST https://queue.fal.run/fal-ai/flux/schnell "HTTP/1.1 200 OK"
-2025-05-13 16:53:12,136 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:53:12,140 - DEBUG - receive_response_body.complete
-2025-05-13 16:53:12,140 - DEBUG - response_closed.started
-2025-05-13 16:53:12,141 - DEBUG - response_closed.complete
-2025-05-13 16:53:12,143 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:53:12,143 - DEBUG - send_request_headers.complete
-2025-05-13 16:53:12,143 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:53:12,144 - DEBUG - send_request_body.complete
-2025-05-13 16:53:12,144 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:53:12,408 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:53:12 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:53:12,409 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/490f08a3-6b0f-4a0a-bb84-41fed0cbf7f8/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:53:12,409 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:53:12,410 - DEBUG - receive_response_body.complete
-2025-05-13 16:53:12,410 - DEBUG - response_closed.started
-2025-05-13 16:53:12,410 - DEBUG - response_closed.complete
-2025-05-13 16:53:12,512 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:53:12,513 - DEBUG - send_request_headers.complete
-2025-05-13 16:53:12,514 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:53:12,514 - DEBUG - send_request_body.complete
-2025-05-13 16:53:12,514 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:53:12,727 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:53:12 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:53:12,727 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/490f08a3-6b0f-4a0a-bb84-41fed0cbf7f8/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:53:12,728 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:53:12,728 - DEBUG - receive_response_body.complete
-2025-05-13 16:53:12,728 - DEBUG - response_closed.started
-2025-05-13 16:53:12,728 - DEBUG - response_closed.complete
-2025-05-13 16:53:12,829 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:53:12,829 - DEBUG - send_request_headers.complete
-2025-05-13 16:53:12,829 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:53:12,829 - DEBUG - send_request_body.complete
-2025-05-13 16:53:12,829 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:53:13,064 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:53:13 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'448'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:53:13,065 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/490f08a3-6b0f-4a0a-bb84-41fed0cbf7f8/status?logs=true "HTTP/1.1 200 OK"
-2025-05-13 16:53:13,065 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:53:13,066 - DEBUG - receive_response_body.complete
-2025-05-13 16:53:13,066 - DEBUG - response_closed.started
-2025-05-13 16:53:13,066 - DEBUG - response_closed.complete
-2025-05-13 16:53:13,068 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:53:13,068 - DEBUG - send_request_headers.complete
-2025-05-13 16:53:13,068 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:53:13,069 - DEBUG - send_request_body.complete
-2025-05-13 16:53:13,069 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:53:13,224 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:53:13 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'450'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:53:13,225 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/490f08a3-6b0f-4a0a-bb84-41fed0cbf7f8/status?logs=false "HTTP/1.1 200 OK"
-2025-05-13 16:53:13,226 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:53:13,227 - DEBUG - receive_response_body.complete
-2025-05-13 16:53:13,227 - DEBUG - response_closed.started
-2025-05-13 16:53:13,227 - DEBUG - response_closed.complete
-2025-05-13 16:53:13,229 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:53:13,229 - DEBUG - send_request_headers.complete
-2025-05-13 16:53:13,230 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:53:13,230 - DEBUG - send_request_body.complete
-2025-05-13 16:53:13,230 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:53:13,429 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:53:13 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'831'), (b'Connection', b'keep-alive'), (b'x-fal-billable-units', b'1'), (b'X-Fal-Served-From', b'8df4cec5-0b22-46e6-bad2-e3ef50116423'), (b'x-fal-request-id', b'490f08a3-6b0f-4a0a-bb84-41fed0cbf7f8'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:53:13,430 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/490f08a3-6b0f-4a0a-bb84-41fed0cbf7f8 "HTTP/1.1 200 OK"
-2025-05-13 16:53:13,430 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:53:13,430 - DEBUG - receive_response_body.complete
-2025-05-13 16:53:13,430 - DEBUG - response_closed.started
-2025-05-13 16:53:13,430 - DEBUG - response_closed.complete
-2025-05-13 16:53:13,430 - DEBUG - FAL AI response received:
-2025-05-13 16:53:13,430 - DEBUG - {
-  "images": [
-    {
-      "url": "https://v3.fal.media/files/elephant/NUGbrpn7009_EpMN4iIKp.png",
-      "width": 592,
-      "height": 592,
-      "content_type": "image/jpeg"
-    }
-  ],
-  "timings": {
-    "inference": 0.21043042885139585
-  },
-  "seed": 42,
-  "has_nsfw_concepts": [
-    false
-  ],
-  "prompt": "Here is the converted prompt:\n\n\"Generate an image of Sir Reginald, a gallant knight, riding Galahad, his trusty steed, as they approach the lair of the dreaded dragon Blaze. The scene sh...
-2025-05-13 16:53:13,430 - DEBUG - Image URL: https://v3.fal.media/files/elephant/NUGbrpn7009_EpMN4iIKp.png
-2025-05-13 16:53:13,430 - DEBUG - Downloading image...
-2025-05-13 16:53:14,846 - DEBUG - Converting image to Pygame surface
-2025-05-13 16:53:14,898 - DEBUG - Scaling image from 592x592 to 600x600
-2025-05-13 16:53:14,905 - DEBUG - Image 1 successfully loaded and converted
-2025-05-13 16:53:14,906 - DEBUG - === COMPLETED IMAGE GENERATION FOR SCENE 1 ===
-2025-05-13 16:53:14,906 - DEBUG - === STARTING IMAGE GENERATION FOR SCENE 2 ===
-2025-05-13 16:53:14,906 - DEBUG - Scene text: Blaze emerges from the depths of the lair, its massive scales glinting like molten lava in the sunlight. The dragon's fiery breath illuminates the dark cavern behind it, revealing a hoard of glittering treasure and ancient artifacts. Sir Reginald draws his sword, its blade shimmering with a faint blue light as he prepares to face the beast. Blaze, sensing victory within its grasp, unleashes a deafening roar and charges forward, claws extended.
-2025-05-13 16:53:14,906 - DEBUG - Creating optimized image prompt using Llama 3
-2025-05-13 16:53:14,908 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:53:14,910 - DEBUG - send_request_headers.complete
-2025-05-13 16:53:14,911 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:53:14,912 - DEBUG - send_request_body.complete
-2025-05-13 16:53:14,913 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:54:18,506 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Tue, 13 May 2025 14:54:18 GMT'), (b'Content-Length', b'1016')])
-2025-05-13 16:54:18,507 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
-2025-05-13 16:54:18,507 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:54:18,507 - DEBUG - receive_response_body.complete
-2025-05-13 16:54:18,507 - DEBUG - response_closed.started
-2025-05-13 16:54:18,507 - DEBUG - response_closed.complete
-2025-05-13 16:54:18,507 - DEBUG - Generated image prompt: Here is a clear and detailed prompt for image generation:
-
-"Create an image of Blaze, a massive dragon, emerging from a dark lair into bright sunlight. The dragon's scales should glint like molten lava, with warm orange and red hues dominant in its body. In the background, illuminate the cavern with Blaze's fiery breath, highlighting a hoard of treasure and ancient artifacts with golden and gemstone colors. Sir Reginald, dressed in armor, stands ready to face the beast, his sword shining with a faint blue light. The dragon should be mid-charge, claws extended, with a deafening roar emanating from its open mouth. Lighting should be dramatic, with contrasting warm and cool tones creating depth and tension."
-2025-05-13 16:54:18,507 - DEBUG - Calling FAL AI FLUX with prompt: Here is a clear and detailed prompt for image generation:
-
-"Create an image of Blaze, a massive drag...
-2025-05-13 16:54:18,507 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
-2025-05-13 16:54:18,508 - DEBUG - close.started
-2025-05-13 16:54:18,508 - DEBUG - close.complete
-2025-05-13 16:54:18,508 - DEBUG - connect_tcp.started host='queue.fal.run' port=443 local_address=None timeout=120.0 socket_options=None
-2025-05-13 16:54:18,648 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x76a9a2f8a6d0>
-2025-05-13 16:54:18,648 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x76a9a2f056d0> server_hostname='queue.fal.run' timeout=120.0
-2025-05-13 16:54:18,865 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x76a9a2f8c190>
-2025-05-13 16:54:18,866 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:54:18,866 - DEBUG - send_request_headers.complete
-2025-05-13 16:54:18,867 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:54:18,867 - DEBUG - send_request_body.complete
-2025-05-13 16:54:18,867 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:54:19,069 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:54:18 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'433'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:54:19,070 - INFO - HTTP Request: POST https://queue.fal.run/fal-ai/flux/schnell "HTTP/1.1 200 OK"
-2025-05-13 16:54:19,071 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:54:19,071 - DEBUG - receive_response_body.complete
-2025-05-13 16:54:19,071 - DEBUG - response_closed.started
-2025-05-13 16:54:19,072 - DEBUG - response_closed.complete
-2025-05-13 16:54:19,086 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:54:19,091 - DEBUG - send_request_headers.complete
-2025-05-13 16:54:19,091 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:54:19,092 - DEBUG - send_request_body.complete
-2025-05-13 16:54:19,092 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:54:19,886 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:54:19 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:54:19,887 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/1d27b46e-a8ce-441b-9a19-9ee32b970412/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:54:19,888 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:54:19,888 - DEBUG - receive_response_body.complete
-2025-05-13 16:54:19,888 - DEBUG - response_closed.started
-2025-05-13 16:54:19,888 - DEBUG - response_closed.complete
-2025-05-13 16:54:19,990 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:54:19,991 - DEBUG - send_request_headers.complete
-2025-05-13 16:54:19,992 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:54:19,995 - DEBUG - send_request_body.complete
-2025-05-13 16:54:19,996 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:54:20,193 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:54:20 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'447'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:54:20,194 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/1d27b46e-a8ce-441b-9a19-9ee32b970412/status?logs=true "HTTP/1.1 200 OK"
-2025-05-13 16:54:20,194 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:54:20,194 - DEBUG - receive_response_body.complete
-2025-05-13 16:54:20,194 - DEBUG - response_closed.started
-2025-05-13 16:54:20,194 - DEBUG - response_closed.complete
-2025-05-13 16:54:20,195 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:54:20,196 - DEBUG - send_request_headers.complete
-2025-05-13 16:54:20,196 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:54:20,197 - DEBUG - send_request_body.complete
-2025-05-13 16:54:20,197 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:54:20,398 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:54:20 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'449'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:54:20,399 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/1d27b46e-a8ce-441b-9a19-9ee32b970412/status?logs=false "HTTP/1.1 200 OK"
-2025-05-13 16:54:20,400 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:54:20,400 - DEBUG - receive_response_body.complete
-2025-05-13 16:54:20,400 - DEBUG - response_closed.started
-2025-05-13 16:54:20,400 - DEBUG - response_closed.complete
-2025-05-13 16:54:20,401 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:54:20,402 - DEBUG - send_request_headers.complete
-2025-05-13 16:54:20,402 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:54:20,402 - DEBUG - send_request_body.complete
-2025-05-13 16:54:20,402 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:54:20,603 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:54:20 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'949'), (b'Connection', b'keep-alive'), (b'x-fal-billable-units', b'1'), (b'X-Fal-Served-From', b'6efecf42-482e-4aee-ba1e-207096a1bc40'), (b'x-fal-request-id', b'1d27b46e-a8ce-441b-9a19-9ee32b970412'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:54:20,604 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/1d27b46e-a8ce-441b-9a19-9ee32b970412 "HTTP/1.1 200 OK"
-2025-05-13 16:54:20,604 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:54:20,605 - DEBUG - receive_response_body.complete
-2025-05-13 16:54:20,605 - DEBUG - response_closed.started
-2025-05-13 16:54:20,605 - DEBUG - response_closed.complete
-2025-05-13 16:54:20,606 - DEBUG - FAL AI response received:
-2025-05-13 16:54:20,606 - DEBUG - {
-  "images": [
-    {
-      "url": "https://v3.fal.media/files/elephant/C-nFfpngA71MX2bwQhRCG.png",
-      "width": 592,
-      "height": 592,
-      "content_type": "image/jpeg"
-    }
-  ],
-  "timings": {
-    "inference": 0.21504267677664757
-  },
-  "seed": 43,
-  "has_nsfw_concepts": [
-    false
-  ],
-  "prompt": "Here is a clear and detailed prompt for image generation:\n\n\"Create an image of Blaze, a massive dragon, emerging from a dark lair into bright sunlight. The dragon's scales should glint l...
-2025-05-13 16:54:20,606 - DEBUG - Image URL: https://v3.fal.media/files/elephant/C-nFfpngA71MX2bwQhRCG.png
-2025-05-13 16:54:20,607 - DEBUG - Downloading image...
-2025-05-13 16:54:23,264 - DEBUG - Converting image to Pygame surface
-2025-05-13 16:54:23,321 - DEBUG - Scaling image from 592x592 to 600x600
-2025-05-13 16:54:23,331 - DEBUG - Image 2 successfully loaded and converted
-2025-05-13 16:54:23,333 - DEBUG - === COMPLETED IMAGE GENERATION FOR SCENE 2 ===
-2025-05-13 16:54:23,333 - DEBUG - === STARTING IMAGE GENERATION FOR SCENE 3 ===
-2025-05-13 16:54:23,334 - DEBUG - Scene text: In a flash of banana-fueled magic, Sir Reginald leaps forth, banana held aloft like a sacred talisman. As the dragon's claws snap shut mere inches from his face, the knight raises the banana, channeling its energy into a blast of pure force. Blaze recoils, its scales crackling with electricity as it realizes too late that the magic banana has turned the tide of battle. With one final, mighty swing of his sword, Sir Reginald strikes the dragon's heart, ending its reign of terror and securing his place in legend.
-2025-05-13 16:54:23,334 - DEBUG - Creating optimized image prompt using Llama 3
-2025-05-13 16:54:23,336 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:54:23,337 - DEBUG - send_request_headers.complete
-2025-05-13 16:54:23,338 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:54:23,339 - DEBUG - send_request_body.complete
-2025-05-13 16:54:23,340 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:55:40,917 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Tue, 13 May 2025 14:55:40 GMT'), (b'Content-Length', b'1208')])
-2025-05-13 16:55:40,918 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
-2025-05-13 16:55:40,918 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:55:40,918 - DEBUG - receive_response_body.complete
-2025-05-13 16:55:40,918 - DEBUG - response_closed.started
-2025-05-13 16:55:40,918 - DEBUG - response_closed.complete
-2025-05-13 16:55:40,918 - DEBUG - Generated image prompt: Here is a clear and detailed image generation prompt based on the scene description:
-
-"Create an action-packed image of Sir Reginald, a brave knight, standing victorious over a defeated dragon. Key elements to include: 
-
-* Sir Reginald holding a banana aloft like a sacred talisman, with a determined expression
-* A dragon's claws snapping shut mere inches from his face, its scales crackling with electricity
-* A bright flash of magical energy surrounding the banana and illuminating the knight's heroic pose
-* The background should feature a dark, misty forest or a dramatic, fiery landscape to emphasize the epic battle
-* The colors palette should include warm tones like golden yellow, orange, and red, with highlights of bright blue and white for the magic effects. 
-* Ensure that Sir Reginald's sword is positioned triumphantly near the dragon's heart, symbolizing his victory over the beast."
-2025-05-13 16:55:40,918 - DEBUG - Calling FAL AI FLUX with prompt: Here is a clear and detailed image generation prompt based on the scene description:
-
-"Create an act...
-2025-05-13 16:55:40,918 - DEBUG - Image dimensions: {'width': 600, 'height': 600}
-2025-05-13 16:55:40,919 - DEBUG - close.started
-2025-05-13 16:55:40,919 - DEBUG - close.complete
-2025-05-13 16:55:40,919 - DEBUG - connect_tcp.started host='queue.fal.run' port=443 local_address=None timeout=120.0 socket_options=None
-2025-05-13 16:55:41,236 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x76a9a2f96890>
-2025-05-13 16:55:41,236 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x76a9a2f056d0> server_hostname='queue.fal.run' timeout=120.0
-2025-05-13 16:55:41,360 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x76a9a2f96850>
-2025-05-13 16:55:41,360 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-05-13 16:55:41,361 - DEBUG - send_request_headers.complete
-2025-05-13 16:55:41,361 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-05-13 16:55:41,362 - DEBUG - send_request_body.complete
-2025-05-13 16:55:41,362 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-05-13 16:55:41,510 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:55:41 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'433'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:55:41,510 - INFO - HTTP Request: POST https://queue.fal.run/fal-ai/flux/schnell "HTTP/1.1 200 OK"
-2025-05-13 16:55:41,510 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-13 16:55:41,510 - DEBUG - receive_response_body.complete
-2025-05-13 16:55:41,510 - DEBUG - response_closed.started
-2025-05-13 16:55:41,511 - DEBUG - response_closed.complete
-2025-05-13 16:55:41,511 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:55:41,511 - DEBUG - send_request_headers.complete
-2025-05-13 16:55:41,511 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:55:41,512 - DEBUG - send_request_body.complete
-2025-05-13 16:55:41,512 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:55:41,764 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:55:41 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:55:41,765 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/085782ad-4738-4a1b-88a6-ffc7deb6a674/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:55:41,765 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:55:41,765 - DEBUG - receive_response_body.complete
-2025-05-13 16:55:41,765 - DEBUG - response_closed.started
-2025-05-13 16:55:41,765 - DEBUG - response_closed.complete
-2025-05-13 16:55:41,866 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:55:41,866 - DEBUG - send_request_headers.complete
-2025-05-13 16:55:41,866 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:55:41,867 - DEBUG - send_request_body.complete
-2025-05-13 16:55:41,867 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:55:42,313 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'Date', b'Tue, 13 May 2025 14:55:42 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'413'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:55:42,314 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/085782ad-4738-4a1b-88a6-ffc7deb6a674/status?logs=true "HTTP/1.1 202 Accepted"
-2025-05-13 16:55:42,314 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:55:42,314 - DEBUG - receive_response_body.complete
-2025-05-13 16:55:42,314 - DEBUG - response_closed.started
-2025-05-13 16:55:42,315 - DEBUG - response_closed.complete
-2025-05-13 16:55:42,416 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:55:42,417 - DEBUG - send_request_headers.complete
-2025-05-13 16:55:42,418 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:55:42,419 - DEBUG - send_request_body.complete
-2025-05-13 16:55:42,419 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:55:42,622 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:55:42 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'448'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:55:42,623 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/085782ad-4738-4a1b-88a6-ffc7deb6a674/status?logs=true "HTTP/1.1 200 OK"
-2025-05-13 16:55:42,623 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:55:42,624 - DEBUG - receive_response_body.complete
-2025-05-13 16:55:42,624 - DEBUG - response_closed.started
-2025-05-13 16:55:42,624 - DEBUG - response_closed.complete
-2025-05-13 16:55:42,625 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:55:42,626 - DEBUG - send_request_headers.complete
-2025-05-13 16:55:42,626 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:55:42,626 - DEBUG - send_request_body.complete
-2025-05-13 16:55:42,626 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:55:42,754 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:55:42 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'450'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:55:42,755 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/085782ad-4738-4a1b-88a6-ffc7deb6a674/status?logs=false "HTTP/1.1 200 OK"
-2025-05-13 16:55:42,755 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:55:42,756 - DEBUG - receive_response_body.complete
-2025-05-13 16:55:42,756 - DEBUG - response_closed.started
-2025-05-13 16:55:42,756 - DEBUG - response_closed.complete
-2025-05-13 16:55:42,758 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2025-05-13 16:55:42,758 - DEBUG - send_request_headers.complete
-2025-05-13 16:55:42,758 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2025-05-13 16:55:42,759 - DEBUG - send_request_body.complete
-2025-05-13 16:55:42,759 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2025-05-13 16:55:42,988 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 May 2025 14:55:42 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'1138'), (b'Connection', b'keep-alive'), (b'x-fal-billable-units', b'1'), (b'X-Fal-Served-From', b'a124c4f4-7ade-4a41-960e-ae4fc9103bc6'), (b'x-fal-request-id', b'085782ad-4738-4a1b-88a6-ffc7deb6a674'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'X-Robots-Tag', b'noindex')])
-2025-05-13 16:55:42,989 - INFO - HTTP Request: GET https://queue.fal.run/fal-ai/flux/requests/085782ad-4738-4a1b-88a6-ffc7deb6a674 "HTTP/1.1 200 OK"
-2025-05-13 16:55:42,989 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2025-05-13 16:55:42,990 - DEBUG - receive_response_body.complete
-2025-05-13 16:55:42,990 - DEBUG - response_closed.started
-2025-05-13 16:55:42,990 - DEBUG - response_closed.complete
-2025-05-13 16:55:42,991 - DEBUG - FAL AI response received:
-2025-05-13 16:55:42,991 - DEBUG - {
-  "images": [
-    {
-      "url": "https://v3.fal.media/files/zebra/Pf0glGMGVc7Ped2WnQoM1.png",
-      "width": 592,
-      "height": 592,
-      "content_type": "image/jpeg"
-    }
-  ],
-  "timings": {
-    "inference": 0.21244920697063208
-  },
-  "seed": 44,
-  "has_nsfw_concepts": [
-    false
-  ],
-  "prompt": "Here is a clear and detailed image generation prompt based on the scene description:\n\n\"Create an action-packed image of Sir Reginald, a brave knight, standing victorious over a defeated dra...
-2025-05-13 16:55:42,991 - DEBUG - Image URL: https://v3.fal.media/files/zebra/Pf0glGMGVc7Ped2WnQoM1.png
-2025-05-13 16:55:42,992 - DEBUG - Downloading image...
-2025-05-13 16:55:45,292 - DEBUG - Converting image to Pygame surface
-2025-05-13 16:55:45,340 - DEBUG - Scaling image from 592x592 to 600x600
-2025-05-13 16:55:45,347 - DEBUG - Image 3 successfully loaded and converted
-2025-05-13 16:55:45,348 - DEBUG - === COMPLETED IMAGE GENERATION FOR SCENE 3 ===
-2025-05-13 16:55:45,349 - DEBUG - === STORY AND IMAGE GENERATION COMPLETE ===
-2025-05-13 17:05:30,319 - DEBUG - Navigation: Moving to page 2
-2025-05-13 17:05:30,329 - DEBUG - === VIEWING PAGE 2 ===
-2025-05-13 17:05:30,330 - DEBUG - Scene text: Blaze emerges from the depths of the lair, its massive scales glinting like molten lava in the sunli...
-2025-05-13 17:05:30,371 - DEBUG - === VIEWING PAGE 2 ===
-2025-05-13 17:05:30,372 - DEBUG - Scene text: Blaze emerges from the depths of the lair, its massive scales glinting like molten lava in the sunli...
-2025-05-13 17:05:30,408 - DEBUG - === VIEWING PAGE 2 ===
-2025-05-13 17:05:30,410 - DEBUG - Scene text: Blaze emerges from the depths of the lair, its massive scales glinting like molten lava in the sunli...
-2025-05-13 17:05:45,711 - DEBUG - Navigation: Moving to page 3
-2025-05-13 17:05:45,722 - DEBUG - === VIEWING PAGE 3 ===
-2025-05-13 17:05:45,723 - DEBUG - Scene text: In a flash of banana-fueled magic, Sir Reginald leaps forth, banana held aloft like a sacred talisma...
-2025-05-13 17:05:45,761 - DEBUG - === VIEWING PAGE 3 ===
-2025-05-13 17:05:45,763 - DEBUG - Scene text: In a flash of banana-fueled magic, Sir Reginald leaps forth, banana held aloft like a sacred talisma...
-2025-05-13 17:05:45,795 - DEBUG - === VIEWING PAGE 3 ===
-2025-05-13 17:05:45,796 - DEBUG - Scene text: In a flash of banana-fueled magic, Sir Reginald leaps forth, banana held aloft like a sacred talisma...
-2025-05-13 17:05:45,838 - DEBUG - === VIEWING PAGE 3 ===
-2025-05-13 17:05:45,839 - DEBUG - Scene text: In a flash of banana-fueled magic, Sir Reginald leaps forth, banana held aloft like a sacred talisma...
-2025-05-13 17:06:05,224 - DEBUG - === APPLICATION CLOSING ===
+  "prompt": "Here is the rewritten prompt:\n\n\"Generate an image of a vibrant flea market scene at sunset. Focus on Jack's crate, transformed into a treasure trove of sold goods. The crate should be su...
+2025-05-14 17:30:52,088 - DEBUG - Image URL: https://v3.fal.media/files/elephant/k3nb1dHDNKja5VGqEZRD2.png
+2025-05-14 17:30:52,088 - DEBUG - Downloading image...
+2025-05-14 17:30:54,767 - DEBUG - Image 3 successfully downloaded
+2025-05-14 17:30:54,768 - DEBUG - === COMPLETED IMAGE GENERATION FOR SCENE 3 ===
+2025-05-14 17:30:54,769 - DEBUG - === STORY AND IMAGE GENERATION COMPLETE ===
+2025-05-14 17:30:59,768 - DEBUG - Navigation: Moving to page 2
+2025-05-14 17:31:00,797 - DEBUG - Navigation: Moving to page 3
+2025-05-14 17:31:09,342 - DEBUG - === APPLICATION CLOSING ===
