@@ -11,7 +11,6 @@ import urllib.request
 import io
 dotenv.load_dotenv()
 import fal_client
-import ollama
 
 # Set up logging
 logging.basicConfig(
@@ -67,28 +66,31 @@ class AI_Generation:
         self.status_callback = status_callback
         self.image_status_callback = image_status_callback
 
-    def on_queue_update(self, update, scene_index):
+    def on_queue_update(self, update, scene_index=None):
         """Callback function for FAL API queue updates"""
         if hasattr(update, 'logs') and update.logs:
             for log in update.logs:
-                logging.debug(f"FAL API (Scene {scene_index+1}) update: {log.get('message', '')}")
+                if scene_index is not None:
+                    logging.debug(f"FAL API (Scene {scene_index+1}) update: {log.get('message', '')}")
+                else:
+                    logging.debug(f"FAL API update: {log.get('message', '')}")
 
     def generate_story_prompt(self, prompt, num_scenes=None):
         """
-        Generate just the story text based on a prompt
+        Generate just the story text based on a prompt using FAL AI with GPT-4o
         Returns a list of scene descriptions
         """
         if num_scenes is None:
             num_scenes = self.default_num_scenes
 
         try:
-            self.status_callback(f"Asking Llama 3 to create a {num_scenes}-scene story...")
+            self.status_callback(f"Asking GPT-4o to create a {num_scenes}-scene story...")
 
             logging.debug(f"=== STARTING STORY TEXT GENERATION ===")
             logging.debug(f"User prompt: '{prompt}'")
             logging.debug(f"Requested scenes: {num_scenes}")
 
-            # Generate story with Ollama Llama 3 - dynamic scene prompt construction
+            # Generate story with GPT-4o through FAL AI - dynamic scene prompt construction
             story_prompt = f"Create a {num_scenes}-scene picture story based on this prompt: \"{prompt}\"\n\n"
             story_prompt += "Format your response as follows:\n"
 
@@ -106,13 +108,20 @@ class AI_Generation:
 
             story_prompt += "Keep each scene description under 150 words. Make the scenes visual and descriptive."
 
-            logging.debug(f"Sending prompt to Llama 3: {story_prompt[:100]}...")
+            logging.debug(f"Sending prompt to GPT-4o via FAL AI: {story_prompt[:100]}...")
 
-            response = ollama.chat(model="llama3", messages=[
-                {"role": "user", "content": story_prompt}
-            ])
+            # Call FAL AI any-llm API with GPT-4o model
+            result = fal_client.subscribe(
+                "fal-ai/any-llm",
+                arguments={
+                    "model": "openai/gpt-4o",
+                    "prompt": story_prompt
+                },
+                with_logs=True,
+                on_queue_update=self.on_queue_update
+            )
 
-            story_text = response['message']['content']
+            story_text = result["output"]
             logging.debug(f"=== RAW STORY RESPONSE ===\n{story_text}\n=== END RAW RESPONSE ===")
 
             # Parse scenes
@@ -158,6 +167,41 @@ class AI_Generation:
             self.status_callback(f"Error generating story text: {str(e)}")
             return []
 
+    def enhance_image_prompt(self, scene_text, scene_index):
+        """
+        Use the video prompt generator to create an enhanced image prompt
+        """
+        try:
+            logging.debug(f"=== ENHANCING IMAGE PROMPT FOR SCENE {scene_index+1} ===")
+            logging.debug(f"Scene text: {scene_text}")
+
+            # Create a scene-specific queue update callback
+            def on_queue_update_for_video_prompt(update):
+                self.on_queue_update(update, scene_index)
+
+            # Call FAL AI video prompt generator
+            result = fal_client.subscribe(
+                "fal-ai/video-prompt-generator",
+                arguments={
+                    "input_concept": scene_text,
+                    "style": "Cinematic",  # Using Cinematic style for more visual details
+                    "camera_style": "Steadicam flow",  # Add camera style for more visual variety
+                    "special_effects": "Practical effects",  # Add special effects for visual interest
+                    "prompt_length": "Medium",  # Medium length for balance between detail and conciseness
+                    "model": "google/gemini-flash-1.5"  # Using default model for speed
+                },
+                with_logs=True,
+                on_queue_update=on_queue_update_for_video_prompt
+            )
+
+            enhanced_prompt = result["prompt"]
+            logging.debug(f"Enhanced image prompt: {enhanced_prompt}")
+            return enhanced_prompt
+
+        except Exception as e:
+            logging.error(f"Error enhancing image prompt, falling back to original: {str(e)}")
+            return scene_text  # Fallback to original scene text
+
     def generate_image(self, scene_text, scene_index):
         """
         Generate an image for a single scene
@@ -170,36 +214,8 @@ class AI_Generation:
             logging.debug(f"=== STARTING IMAGE GENERATION FOR SCENE {scene_index+1} ===")
             logging.debug(f"Scene text: {scene_text}")
 
-            # Create image prompt
-            image_prompt_creation = f"""
-            Convert this scene description into a clear, detailed prompt for image generation.
-            Focus on visual elements like lighting, perspective, colors, and key objects.
-            Keep it concise (under 100 words) but detailed enough for good image generation.
-
-            Scene: {scene_text}
-
-            Image prompt:
-            """
-
-            logging.debug(f"Creating optimized image prompt using Llama 3")
-
-            # Use Llama 3 to create a better image prompt
-            try:
-                prompt_response = ollama.chat(model="llama3", messages=[
-                    {"role": "user", "content": image_prompt_creation}
-                ])
-
-                image_prompt = prompt_response['message']['content']
-                # Clean up the response if needed
-                if "Image prompt:" in image_prompt:
-                    image_prompt = image_prompt.split("Image prompt:", 1)[1].strip()
-
-                logging.debug(f"Generated image prompt: {image_prompt}")
-            except Exception as e:
-                logging.error(f"Error creating optimized image prompt: {str(e)}")
-                # Fallback to using the scene directly
-                image_prompt = scene_text
-                logging.debug(f"Falling back to using scene text directly")
+            # Use video prompt generator to enhance the image prompt
+            image_prompt = self.enhance_image_prompt(scene_text, scene_index)
 
             # Call FAL API to generate image
             try:
