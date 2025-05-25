@@ -45,6 +45,30 @@
         </select>
       </div>
 
+      <!-- Scene Count Selector -->
+      <div class="mb-6">
+        <label for="sceneCount" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Number of Scenes (3-10)
+        </label>
+        <div class="flex items-center">
+          <input 
+            type="range" 
+            id="sceneCount" 
+            v-model.number="storyPrompt.numScenes" 
+            min="3" 
+            max="10" 
+            step="1" 
+            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+          />
+          <span class="ml-3 w-10 text-center text-gray-700 dark:text-gray-300 font-medium">
+            {{ storyPrompt.numScenes }}
+          </span>
+        </div>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+          More scenes create a longer, more detailed story
+        </p>
+      </div>
+
       <!-- Main Character Input -->
       <div class="mb-6">
         <label for="mainCharacter" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -116,7 +140,8 @@ export default {
         tone: 'Lighthearted',
         mainCharacter: '',
         setting: '',
-        artStyle: 'Digital Painting'
+        artStyle: 'Digital Painting',
+        numScenes: 5
       },
       genres: [
         'Fantasy', 

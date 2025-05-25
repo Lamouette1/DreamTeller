@@ -1,8 +1,10 @@
+// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import CreateStory from '../views/CreateStory.vue'
 import ViewStory from '../views/ViewStory.vue'
 import About from '../views/About.vue'
+import LoadStory from '../views/LoadStory.vue' // Add import for LoadStory
 
 const routes = [
   {
@@ -25,6 +27,11 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/load',
+    name: 'LoadStory',
+    component: LoadStory
   }
 ]
 

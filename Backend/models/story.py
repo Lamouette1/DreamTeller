@@ -12,6 +12,7 @@ class StoryPrompt(BaseModel):
     mainCharacter: Optional[str] = Field(None, description="Description of the main character")
     setting: Optional[str] = Field(None, description="The setting of the story")
     artStyle: str = Field(..., description="The art style for illustrations")
+    numScenes: int = Field(5, ge=3, le=10, description="Number of scenes in the story (3-10)")
 
 class Scene(BaseModel):
     """Scene model representing a part of the story with text and image."""
