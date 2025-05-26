@@ -11,11 +11,16 @@
           <button 
             @click="exportToPDF" 
             class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            :disabled="pdfLoading"
           >
-            <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg v-if="!pdfLoading" class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
             </svg>
-            Export as PDF
+            <svg v-else class="mr-2 h-5 w-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            {{ pdfLoading ? 'Generating...' : 'Export as PDF' }}
           </button>
           <button 
             @click="copyShareLink" 
@@ -26,6 +31,16 @@
             </svg>
             Copy Share Link
           </button>
+        </div>
+        
+        <!-- Success Message -->
+        <div v-if="successMessage" class="mt-4 bg-green-50 dark:bg-green-900/20 p-3 rounded-md">
+          <p class="text-sm text-green-800 dark:text-green-300">{{ successMessage }}</p>
+        </div>
+        
+        <!-- Error Message -->
+        <div v-if="errorMessage" class="mt-4 bg-red-50 dark:bg-red-900/20 p-3 rounded-md">
+          <p class="text-sm text-red-800 dark:text-red-300">{{ errorMessage }}</p>
         </div>
       </div>
       
@@ -64,6 +79,19 @@
         </router-link>
       </div>
     </div>
+    
+    <!-- PDF Loading Overlay -->
+    <div v-if="pdfLoading" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center max-w-md">
+        <svg class="animate-spin h-12 w-12 text-indigo-500 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <h3 class="mt-4 text-lg font-medium text-gray-900 dark:text-white">Generating PDF</h3>
+        <p class="mt-2 text-gray-500 dark:text-gray-400">Please wait while we prepare your story for download...</p>
+        <p class="mt-1 text-sm text-gray-400 dark:text-gray-500">This may take a moment, especially for stories with multiple images.</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -85,8 +113,11 @@ export default {
   data() {
     return {
       loading: false,
+      pdfLoading: false,
       shareUrl: '',
-      showShareMessage: false
+      showShareMessage: false,
+      successMessage: '',
+      errorMessage: ''
     }
   },
   computed: {
@@ -108,29 +139,176 @@ export default {
   },
   methods: {
     exportToPDF() {
-      const element = document.createElement('div')
-      element.innerHTML = `
-        <h1 style="font-size: 24px; margin-bottom: 10px;">${this.story.title}</h1>
-        <p style="font-size: 14px; color: #666; margin-bottom: 30px;">${this.storyDetails}</p>
-        ${this.story.scenes.map((scene, index) => `
-          <div style="margin-bottom: 30px;">
-            <h2 style="font-size: 18px; margin-bottom: 10px;">Scene ${index + 1}</h2>
-            <img src="${scene.imageUrl}" style="width: 100%; height: auto; margin-bottom: 10px;" />
-            <p>${scene.text}</p>
-          </div>
-        `).join('')}
-      `
-      
-      const opt = {
-        margin: 1,
-        filename: `${this.story.title.replace(/\s+/g, '_')}.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      if (!this.story) {
+        this.errorMessage = 'Cannot export: story not found';
+        return;
       }
+
+      this.pdfLoading = true;
+      this.errorMessage = '';
+      this.successMessage = '';
       
-      html2pdf().set(opt).from(element).save()
+      // Create a container for the PDF content
+      const container = document.createElement('div');
+      container.style.padding = '20px';
+      container.style.fontFamily = 'Arial, sans-serif';
+      
+      // Add the story title and details
+      const header = document.createElement('div');
+      header.innerHTML = `
+        <h1 style="font-size: 28px; margin-bottom: 10px; color: #333; text-align: center;">${this.story.title}</h1>
+        <p style="font-size: 14px; color: #666; margin-bottom: 30px; text-align: center;">${this.storyDetails}</p>
+      `;
+      container.appendChild(header);
+      
+      // Track image loading with promises
+      const imagePromises = [];
+      
+      // Add each scene to the container
+      this.story.scenes.forEach((scene, index) => {
+        const sceneDiv = document.createElement('div');
+        sceneDiv.style.marginBottom = '40px';
+        sceneDiv.style.pageBreakInside = 'avoid'; // Try to keep scenes on the same page
+        
+        // Scene header
+        const sceneHeader = document.createElement('h2');
+        sceneHeader.textContent = `Scene ${index + 1}`;
+        sceneHeader.style.fontSize = '22px';
+        sceneHeader.style.marginBottom = '15px';
+        sceneHeader.style.borderBottom = '1px solid #ddd';
+        sceneHeader.style.paddingBottom = '8px';
+        sceneHeader.style.color = '#444';
+        sceneDiv.appendChild(sceneHeader);
+        
+        // Scene image (if available)
+        if (scene.imageUrl) {
+          const imagePromise = new Promise((resolve) => {
+            const img = new Image();
+            img.crossOrigin = 'Anonymous'; // Enable cross-origin loading
+            
+            img.onload = () => {
+              // Create image container
+              const imgContainer = document.createElement('div');
+              imgContainer.style.textAlign = 'center';
+              imgContainer.style.marginBottom = '20px';
+              
+              // Style the image
+              img.style.maxWidth = '500px';
+              img.style.maxHeight = '400px';
+              img.style.objectFit = 'contain';
+              img.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+              img.style.borderRadius = '8px';
+              
+              imgContainer.appendChild(img);
+              sceneDiv.appendChild(imgContainer);
+              resolve();
+            };
+            
+            img.onerror = () => {
+              // Create placeholder for failed image
+              const placeholder = document.createElement('div');
+              placeholder.style.width = '100%';
+              placeholder.style.height = '200px';
+              placeholder.style.backgroundColor = '#f1f1f1';
+              placeholder.style.display = 'flex';
+              placeholder.style.alignItems = 'center';
+              placeholder.style.justifyContent = 'center';
+              placeholder.style.marginBottom = '20px';
+              placeholder.style.borderRadius = '8px';
+              placeholder.textContent = 'Image could not be loaded';
+              placeholder.style.color = '#888';
+              
+              sceneDiv.appendChild(placeholder);
+              resolve(); // Still resolve the promise to continue PDF generation
+            };
+            
+            img.src = scene.imageUrl;
+          });
+          
+          imagePromises.push(imagePromise);
+        }
+        
+        // Scene text
+        const textDiv = document.createElement('div');
+        textDiv.style.lineHeight = '1.6';
+        textDiv.style.fontSize = '14px';
+        textDiv.style.color = '#333';
+        textDiv.style.textAlign = 'justify';
+        
+        // Split the text into paragraphs for better formatting
+        const paragraphs = scene.text.split('\n').filter(p => p.trim());
+        if (paragraphs.length === 0) {
+          // If no paragraphs, just use the entire text
+          textDiv.innerHTML = `<p>${scene.text}</p>`;
+        } else {
+          // Add each paragraph
+          textDiv.innerHTML = paragraphs.map(p => `<p style="margin-bottom: 10px;">${p}</p>`).join('');
+        }
+        
+        sceneDiv.appendChild(textDiv);
+        container.appendChild(sceneDiv);
+      });
+      
+      // Wait for all images to load before generating PDF
+      Promise.all(imagePromises)
+        .then(() => {
+          // Configure PDF options
+          const opt = {
+            margin: [0.75, 0.75, 0.75, 0.75], // Margins in inches [top, right, bottom, left]
+            filename: `${this.story.title.replace(/\s+/g, '_')}.pdf`,
+            image: { 
+              type: 'jpeg', 
+              quality: 0.98 // Higher quality for images
+            },
+            html2canvas: { 
+              scale: 2, // Higher scale for better image quality
+              useCORS: true, // Enable CORS for images
+              allowTaint: true, // Allow tainted canvas
+              logging: true, // Enable logging for debugging
+              letterRendering: true // Improve text rendering
+            },
+            jsPDF: { 
+              unit: 'in', 
+              format: 'letter', 
+              orientation: 'portrait',
+              compress: true,
+              hotfixes: ["px_scaling"] // Fix for image scaling issues
+            },
+            pagebreak: { 
+              mode: ['avoid-all', 'css', 'legacy'],
+              before: '.page-break-before',
+              after: '.page-break-after',
+              avoid: '.page-break-avoid'
+            }
+          };
+          
+          // Generate the PDF
+          html2pdf()
+            .from(container)
+            .set(opt)
+            .save()
+            .then(() => {
+              this.pdfLoading = false;
+              this.successMessage = 'PDF generated successfully!';
+              
+              // Clear success message after 5 seconds
+              setTimeout(() => {
+                this.successMessage = '';
+              }, 5000);
+            })
+            .catch(error => {
+              console.error('PDF generation error:', error);
+              this.pdfLoading = false;
+              this.errorMessage = 'Failed to generate PDF. Please try again.';
+            });
+        })
+        .catch(error => {
+          console.error('Image loading error:', error);
+          this.pdfLoading = false;
+          this.errorMessage = 'Error loading images for PDF generation.';
+        });
     },
+    
     copyShareLink() {
       // In a real app, this would create a unique URL for sharing
       const shareableUrl = `${window.location.origin}/story/${this.id}`
@@ -138,14 +316,21 @@ export default {
         .then(() => {
           this.shareUrl = shareableUrl
           this.showShareMessage = true
+          this.successMessage = 'Share link copied to clipboard!';
           setTimeout(() => {
             this.showShareMessage = false
+            this.successMessage = '';
           }, 3000)
         })
         .catch(err => {
           console.error('Failed to copy URL: ', err)
+          this.errorMessage = 'Failed to copy share link.';
         })
     }
   }
 }
 </script>
+
+<style scoped>
+/* Add any component-specific styles here */
+</style>

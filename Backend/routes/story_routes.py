@@ -7,6 +7,7 @@ from datetime import datetime
 import os
 import io
 import zipfile
+from loguru import logger
 
 from models.story import (
     StoryPrompt,
@@ -37,6 +38,8 @@ async def create_story(prompt: StoryPrompt):
     Returns:
         The complete generated story
     """
+    logger.info(f"Received story prompt: {prompt.model_dump()}")
+    logger.info(f"numScenes value: {prompt.numScenes}")
     # Generate the story using FAL AI
     story = await fal_service.generate_story(prompt)
     

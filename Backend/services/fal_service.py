@@ -317,7 +317,7 @@ class FALService:
         """Generate a full story with images using the four-step process"""
         try:
             num_scenes = prompt.numScenes if hasattr(prompt, 'numScenes') else self.default_num_scenes
-            
+            logger.info(f"Generating story with {prompt.numScenes} scenes")
             # Step 1: Generate the story rough sketch
             story_sketch = await self.generate_story_rough_sketch(
                 prompt.idea,
