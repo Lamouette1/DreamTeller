@@ -1,3 +1,4 @@
+// src/components/StoryViewer.vue
 <template>
   <div>
     <div v-if="story" class="space-y-8">
@@ -5,12 +6,26 @@
       <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
         <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">{{ story.title }}</h1>
         <p class="text-gray-600 dark:text-gray-400">{{ storyDetails }}</p>
-        
+
         <!-- Export Options -->
         <div class="mt-4 flex space-x-3">
+         <button 
+            @click="saveStory" 
+            class="inline-flex items-center px-4 py-2 border border-green-300 shadow-sm text-sm font-medium rounded-md text-green-700 dark:text-green-300 bg-white dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-green-900/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            :disabled="saving"
+            >
+            <svg v-if="!saving" class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path>
+            </svg>
+            <svg v-else class="mr-2 h-5 w-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            {{ saving ? 'Saving...' : 'Save Story' }}
+          </button>
           <button 
             @click="exportToPDF" 
-            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
             :disabled="pdfLoading"
           >
             <svg v-if="!pdfLoading" class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -32,18 +47,18 @@
             Copy Share Link
           </button>
         </div>
-        
+
         <!-- Success Message -->
         <div v-if="successMessage" class="mt-4 bg-green-50 dark:bg-green-900/20 p-3 rounded-md">
           <p class="text-sm text-green-800 dark:text-green-300">{{ successMessage }}</p>
         </div>
-        
+
         <!-- Error Message -->
         <div v-if="errorMessage" class="mt-4 bg-red-50 dark:bg-red-900/20 p-3 rounded-md">
           <p class="text-sm text-red-800 dark:text-red-300">{{ errorMessage }}</p>
         </div>
       </div>
-      
+
       <!-- Scene Cards -->
       <div class="grid grid-cols-1 gap-6">
         <scene-card
@@ -54,7 +69,7 @@
         />
       </div>
     </div>
-    
+
     <!-- Loading State -->
     <div v-else-if="loading" class="flex justify-center items-center h-64">
       <div class="loader flex items-center">
@@ -65,7 +80,7 @@
         <span class="ml-3 text-lg text-gray-600 dark:text-gray-400">Loading your story...</span>
       </div>
     </div>
-    
+
     <!-- Error State -->
     <div v-else class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 text-center">
       <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +94,7 @@
         </router-link>
       </div>
     </div>
-    
+
     <!-- PDF Loading Overlay -->
     <div v-if="pdfLoading" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center max-w-md">
@@ -98,6 +113,7 @@
 <script>
 import SceneCard from '@/components/SceneCard.vue'
 import html2pdf from 'html2pdf.js'
+import storyService from '@/services/storyService'
 
 export default {
   name: 'StoryViewer',
@@ -114,6 +130,7 @@ export default {
     return {
       loading: false,
       pdfLoading: false,
+      saving: false,
       shareUrl: '',
       showShareMessage: false,
       successMessage: '',
@@ -138,6 +155,50 @@ export default {
     }, 1000)
   },
   methods: {
+    async saveStory() {
+      if (!this.story) {
+        this.errorMessage = 'Cannot save: story not found';
+        return;
+      }
+
+      this.saving = true;
+      this.errorMessage = '';
+      this.successMessage = '';
+
+      try {
+        // Generate a filename based on the story title
+        const defaultFilename = this.story.title
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '_')
+          .replace(/^_+|_+$/g, '');
+
+        console.log('Saving story with ID:', this.story.id);
+        console.log('Generated filename:', defaultFilename);
+
+        // Call the API to save the story
+        const result = await storyService.saveStory(this.story.id, defaultFilename);
+
+        this.successMessage = `Story saved successfully as "${result.filename}"`;
+        console.log('Story saved:', result);
+
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          this.successMessage = '';
+        }, 5000);
+
+      } catch (error) {
+        console.error('Failed to save story:', error);
+        this.errorMessage = error.response?.data?.detail || 'Failed to save story. Please try again.';
+        
+        // Clear error message after 8 seconds
+        setTimeout(() => {
+          this.errorMessage = '';
+        }, 8000);
+      } finally {
+        this.saving = false;
+      }
+    },
+
     exportToPDF() {
       if (!this.story) {
         this.errorMessage = 'Cannot export: story not found';
@@ -147,12 +208,12 @@ export default {
       this.pdfLoading = true;
       this.errorMessage = '';
       this.successMessage = '';
-      
+
       // Create a container for the PDF content
       const container = document.createElement('div');
       container.style.padding = '20px';
       container.style.fontFamily = 'Arial, sans-serif';
-      
+
       // Add the story title and details
       const header = document.createElement('div');
       header.innerHTML = `
@@ -160,16 +221,16 @@ export default {
         <p style="font-size: 14px; color: #666; margin-bottom: 30px; text-align: center;">${this.storyDetails}</p>
       `;
       container.appendChild(header);
-      
+
       // Track image loading with promises
       const imagePromises = [];
-      
+
       // Add each scene to the container
       this.story.scenes.forEach((scene, index) => {
         const sceneDiv = document.createElement('div');
         sceneDiv.style.marginBottom = '40px';
         sceneDiv.style.pageBreakInside = 'avoid'; // Try to keep scenes on the same page
-        
+
         // Scene header
         const sceneHeader = document.createElement('h2');
         sceneHeader.textContent = `Scene ${index + 1}`;
@@ -179,31 +240,31 @@ export default {
         sceneHeader.style.paddingBottom = '8px';
         sceneHeader.style.color = '#444';
         sceneDiv.appendChild(sceneHeader);
-        
+
         // Scene image (if available)
         if (scene.imageUrl) {
           const imagePromise = new Promise((resolve) => {
             const img = new Image();
             img.crossOrigin = 'Anonymous'; // Enable cross-origin loading
-            
+
             img.onload = () => {
               // Create image container
               const imgContainer = document.createElement('div');
               imgContainer.style.textAlign = 'center';
               imgContainer.style.marginBottom = '20px';
-              
+
               // Style the image
               img.style.maxWidth = '500px';
               img.style.maxHeight = '400px';
               img.style.objectFit = 'contain';
               img.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
               img.style.borderRadius = '8px';
-              
+
               imgContainer.appendChild(img);
               sceneDiv.appendChild(imgContainer);
               resolve();
             };
-            
+
             img.onerror = () => {
               // Create placeholder for failed image
               const placeholder = document.createElement('div');
@@ -217,24 +278,24 @@ export default {
               placeholder.style.borderRadius = '8px';
               placeholder.textContent = 'Image could not be loaded';
               placeholder.style.color = '#888';
-              
+
               sceneDiv.appendChild(placeholder);
               resolve(); // Still resolve the promise to continue PDF generation
             };
-            
+
             img.src = scene.imageUrl;
           });
-          
+
           imagePromises.push(imagePromise);
         }
-        
+
         // Scene text
         const textDiv = document.createElement('div');
         textDiv.style.lineHeight = '1.6';
         textDiv.style.fontSize = '14px';
         textDiv.style.color = '#333';
         textDiv.style.textAlign = 'justify';
-        
+
         // Split the text into paragraphs for better formatting
         const paragraphs = scene.text.split('\n').filter(p => p.trim());
         if (paragraphs.length === 0) {
@@ -244,11 +305,11 @@ export default {
           // Add each paragraph
           textDiv.innerHTML = paragraphs.map(p => `<p style="margin-bottom: 10px;">${p}</p>`).join('');
         }
-        
+
         sceneDiv.appendChild(textDiv);
         container.appendChild(sceneDiv);
       });
-      
+
       // Wait for all images to load before generating PDF
       Promise.all(imagePromises)
         .then(() => {
@@ -281,7 +342,7 @@ export default {
               avoid: '.page-break-avoid'
             }
           };
-          
+
           // Generate the PDF
           html2pdf()
             .from(container)
@@ -290,7 +351,7 @@ export default {
             .then(() => {
               this.pdfLoading = false;
               this.successMessage = 'PDF generated successfully!';
-              
+
               // Clear success message after 5 seconds
               setTimeout(() => {
                 this.successMessage = '';
@@ -308,7 +369,7 @@ export default {
           this.errorMessage = 'Error loading images for PDF generation.';
         });
     },
-    
+
     copyShareLink() {
       // In a real app, this would create a unique URL for sharing
       const shareableUrl = `${window.location.origin}/story/${this.id}`
@@ -333,4 +394,8 @@ export default {
 
 <style scoped>
 /* Add any component-specific styles here */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 </style>

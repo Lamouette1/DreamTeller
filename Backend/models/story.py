@@ -35,7 +35,7 @@ class StoryResponse(BaseModel):
     title: str
     prompt: StoryPrompt
     scenes: List[Scene]
-    
+
 class RegenerateTextRequest(BaseModel):
     """Request model for regenerating scene text."""
     prompt: StoryPrompt

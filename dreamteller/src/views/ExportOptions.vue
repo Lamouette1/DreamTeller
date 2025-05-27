@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
     <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Export & Share</h2>
-    
+
     <div class="space-y-4">
       <!-- Export as PDF -->
       <div>
@@ -15,7 +15,7 @@
           Download as PDF
         </button>
       </div>
-      
+
       <!-- Share Link -->
       <div>
         <button 
@@ -28,7 +28,7 @@
           Generate Share Link
         </button>
       </div>
-      
+
       <!-- Share Link Display (when available) -->
       <div v-if="shareUrl" class="mt-4">
         <label for="share-url" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Share URL</label>
@@ -89,7 +89,7 @@ export default {
           </div>
         `).join('')}
       `
-      
+
       const opt = {
         margin: 1,
         filename: `${this.story.title.replace(/\s+/g, '_')}.pdf`,
@@ -97,16 +97,16 @@ export default {
         html2canvas: { scale: 2 },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
       }
-      
+
       html2pdf().set(opt).from(element).save()
     },
-    
+
     generateShareLink() {
       // In a real app, this would create a unique URL for sharing
       // For demo purposes, we'll just use the story ID in the URL
       this.shareUrl = `${window.location.origin}/story/${this.story.id}`
     },
-    
+
     copyToClipboard() {
       navigator.clipboard.writeText(this.shareUrl)
         .then(() => {

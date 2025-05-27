@@ -2,7 +2,7 @@
 <template>
   <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
     <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Load Saved Stories</h2>
-    
+
     <!-- Upload Story Section -->
     <div class="mb-8 p-4 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg">
       <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Upload Story File</h3>
@@ -27,7 +27,7 @@
         Upload a previously saved .story file
       </p>
     </div>
-    
+
     <!-- Saved Stories List -->
     <div>
       <div class="flex justify-between items-center mb-4">
@@ -43,7 +43,7 @@
           <span class="ml-2">Refresh</span>
         </button>
       </div>
-      
+
       <!-- Loading State -->
       <div v-if="loading" class="text-center py-8">
         <svg class="animate-spin h-8 w-8 text-indigo-500 mx-auto" fill="none" viewBox="0 0 24 24">
@@ -52,7 +52,7 @@
         </svg>
         <p class="mt-2 text-gray-500 dark:text-gray-400">Loading saved stories...</p>
       </div>
-      
+
       <!-- Stories Grid -->
       <div v-else-if="savedStories.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div
@@ -94,7 +94,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Empty State -->
       <div v-else class="text-center py-8">
         <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,7 +103,7 @@
         <p class="mt-2 text-gray-500 dark:text-gray-400">No saved stories found</p>
       </div>
     </div>
-    
+
     <!-- Status Messages -->
     <div v-if="statusMessage" class="mt-4">
       <div
@@ -146,23 +146,36 @@ export default {
     this.fetchSavedStories()
   },
   methods: {
+    // In LoadStory.vue - fetchSavedStories method
     async fetchSavedStories() {
-      this.loading = true
+      this.loading = true;
+      this.statusMessage = '';
+      this.statusType = '';
+
       try {
-        const response = await storyService.listSavedStories()
-        this.savedStories = response.stories || []
+        const response = await storyService.listSavedStories();
+        this.savedStories = response.stories || [];
+
+        console.log(`Found ${this.savedStories.length} saved stories`);
+
+        // If no stories found, display a helpful message
+        if (this.savedStories.length === 0) {
+          this.statusMessage = 'No saved stories found. Try creating and saving a new story first.';
+          this.statusType = 'info';
+        }
       } catch (error) {
-        console.error('Error fetching saved stories:', error)
-        this.showStatus('Failed to load saved stories', 'error')
+        console.error('Error fetching saved stories:', error);
+        this.statusMessage = error.response?.data?.detail || 'Failed to load saved stories';
+        this.statusType = 'error';
       } finally {
-        this.loading = false
+        this.loading = false;
       }
     },
-    
+
     async refreshList() {
       await this.fetchSavedStories()
     },
-    
+
     async loadStory(filename) {
       this.loadingStory = filename
       try {
@@ -177,7 +190,7 @@ export default {
         this.loadingStory = null
       }
     },
-    
+
     async downloadStory(filename) {
       try {
         await storyService.downloadStory(filename)
@@ -187,33 +200,36 @@ export default {
         this.showStatus('Failed to download story', 'error')
       }
     },
-    
+
     async deleteStory(filename) {
       if (!confirm('Are you sure you want to delete this story?')) {
-        return
+        return;
       }
-      
+
       try {
-        await storyService.deleteSavedStory(filename)
-        this.showStatus('Story deleted successfully', 'success')
-        await this.fetchSavedStories()
+        console.log(`Deleting story: ${filename}`);
+        await storyService.deleteSavedStory(filename);
+        this.showStatus('Story deleted successfully', 'success');
+
+        // Refresh the list
+        await this.fetchSavedStories();
       } catch (error) {
-        console.error('Error deleting story:', error)
-        this.showStatus('Failed to delete story', 'error')
+        console.error('Error deleting story:', error);
+        this.showStatus(error.response?.data?.detail || 'Failed to delete story', 'error');
       }
     },
-    
+
     async handleFileUpload(event) {
       const file = event.target.files[0]
       if (!file) return
-      
+
       this.uploading = true
       try {
         const response = await storyService.uploadStory(file)
         this.$store.commit('SET_CURRENT_STORY', response.story)
         this.$store.commit('ADD_STORY', response.story)
         this.showStatus('Story uploaded successfully', 'success')
-        
+
         // Navigate to view the story
         setTimeout(() => {
           this.$router.push({ name: 'ViewStory', params: { id: response.story.id } })
@@ -227,13 +243,13 @@ export default {
         this.$refs.fileInput.value = ''
       }
     },
-    
+
     formatDate(dateString) {
       if (!dateString) return 'Unknown date'
       const date = new Date(dateString)
       return date.toLocaleDateString()
     },
-    
+
     showStatus(message, type) {
       this.statusMessage = message
       this.statusType = type

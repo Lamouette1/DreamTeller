@@ -19,10 +19,10 @@ logger = logging.getLogger("dreamteller")
 def handle_api_errors(func):
     """
     Decorator for route handlers to catch and handle errors gracefully.
-    
+
     Args:
         func: The route handler function to wrap
-        
+
     Returns:
         Wrapped function with error handling
     """
@@ -37,7 +37,7 @@ def handle_api_errors(func):
             # Log the full exception traceback
             logger.error(f"Error in {func.__name__}: {str(e)}")
             logger.error(traceback.format_exc())
-            
+
             # Convert to appropriate HTTP exception
             if "api key" in str(e).lower():
                 # Authentication error
@@ -57,5 +57,5 @@ def handle_api_errors(func):
                     status_code=500, 
                     detail=f"An unexpected error occurred: {str(e)}"
                 )
-    
+
     return wrapper

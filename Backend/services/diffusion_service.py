@@ -14,7 +14,7 @@ class DiffusionService:
     def __init__(self):
         """Initialize the diffusion service with FAL AI configuration."""
         pass
-        
+
     async def generate_image(
         self, 
         prompt: str, 
@@ -26,7 +26,7 @@ class DiffusionService:
     ) -> str:
         """
         Generate an image using FAL AI's Flux model.
-        
+
         Args:
             prompt: Text description of the image to generate
             width: Width of the output image
@@ -34,7 +34,7 @@ class DiffusionService:
             num_inference_steps: Number of denoising steps
             guidance_scale: Scale for classifier-free guidance
             negative_prompt: What NOT to include in the image
-            
+
         Returns:
             URL to the generated image
         """
@@ -43,9 +43,9 @@ class DiffusionService:
             width = width or settings.IMAGE_WIDTH
             height = height or settings.IMAGE_HEIGHT
             num_inference_steps = num_inference_steps or settings.DIFFUSION_STEPS
-            
+
             logger.info(f"Generating image with prompt: {prompt[:100]}...")
-            
+
             # Call FAL AI Flux model
             result = fal_client.subscribe(
                 "fal-ai/flux/schnell",
@@ -60,7 +60,7 @@ class DiffusionService:
                 },
                 with_logs=True
             )
-            
+
             # Process the result
             if result and 'images' in result and len(result['images']) > 0:
                 image_url = result['images'][0]['url']
@@ -69,7 +69,7 @@ class DiffusionService:
             else:
                 logger.error("No images returned from FAL AI")
                 raise Exception("Failed to generate image with FAL AI")
-                
+
         except Exception as e:
             logger.error(f"Error generating image: {str(e)}")
             raise

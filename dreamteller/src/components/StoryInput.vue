@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
     <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Create Your Dream Story</h2>
-    
+
     <form @submit.prevent="submitStoryPrompt">
       <!-- Story Idea Input -->
       <div class="mb-6">
@@ -110,7 +110,7 @@
           <option v-for="style in artStyles" :key="style" :value="style">{{ style }}</option>
         </select>
       </div>
-      
+
       <!-- Submit Button -->
       <div class="flex justify-end">
         <button

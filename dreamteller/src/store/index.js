@@ -43,10 +43,10 @@ export default createStore({
 			try {
 				commit('SET_LOADING', true)
 				commit('SET_ERROR', null)
-				
+
 				// Call the API to generate a story
 				const story = await storyService.generateStory(storyPrompt)
-				
+
 				// Process each scene to generate images
 				for (let i = 0; i < story.scenes.length; i++) {
 					const scene = story.scenes[i]
@@ -58,7 +58,7 @@ export default createStore({
 						}
 					}
 				}
-				
+
 				commit('SET_CURRENT_STORY', story)
 				commit('ADD_STORY', story)
 				return story
@@ -80,7 +80,7 @@ export default createStore({
           scene.text,
           sceneIndex
         )
-        
+
         commit('UPDATE_SCENE_TEXT', { sceneIndex, newText })
       } catch (error) {
         commit('SET_ERROR', error.message || 'Failed to regenerate scene text')
@@ -88,24 +88,41 @@ export default createStore({
         commit('SET_LOADING', false)
       }
     },
-    
+
     async regenerateSceneImage({ commit, state }, sceneIndex) {
 			try {
 					commit('SET_LOADING', true)
-					
+
 					const scene = state.currentStory.scenes[sceneIndex]
 					// Use imagePrompt if available, otherwise generate one
 					const prompt = scene.imagePrompt || 
 					`${state.currentStory.prompt.setting || ''}, ${scene.text}, ${state.currentStory.prompt.artStyle}`
-					
+
 					const newImageUrl = await imageService.generateImage(prompt)
-					
+
 					commit('UPDATE_SCENE_IMAGE', { sceneIndex, newImageUrl })
 			} catch (error) {
 					commit('SET_ERROR', error.message || 'Failed to regenerate scene image')
 			} finally {
 					commit('SET_LOADING', false)
 			}
+    },
+    async saveCurrentStory({ commit, state }, filename = null) {
+      try {
+        commit('SET_LOADING', true);
+
+        if (!state.currentStory) {
+          throw new Error('No current story to save');
+        }
+
+        const response = await storyService.saveStory(state.currentStory.id, filename);
+        return response;
+      } catch (error) {
+        console.error('Error saving current story:', error);
+        throw error;
+      } finally {
+        commit('SET_LOADING', false);
+      }
     }
   }
 })
