@@ -75,7 +75,8 @@
             >
               {{ loadingStory === story.filename ? 'Loading...' : 'Load' }}
             </button>
-            <button
+            <!-- Download and Delete Buttons. the icon is not being dsiplayed -->
+            <button 
               @click="downloadStory(story.filename)"
               class="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
             >

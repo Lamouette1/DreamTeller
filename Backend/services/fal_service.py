@@ -27,6 +27,24 @@ class FALService:
                 else:
                     logger.debug(f"FAL API update: {log.get('message', '')}")
 
+    def get_optimal_image_size(self, art_style: str) -> str:
+        """
+        Get optimal image size based on art style and story type.
+        Returns FAL AI image_size enum value.
+        """
+        # Map art styles to optimal aspect ratios
+        style_mappings = {
+            "Digital Painting": "landscape_4_3",      # Good for detailed scenes
+            "Watercolor": "landscape_4_3",            # Natural, flowing compositions
+            "Pixel Art": "square_hd",                 # Works well in square format
+            "Comic Book": "landscape_16_9",           # Wide, cinematic panels
+            "3D Rendered": "landscape_4_3",           # Detailed 3D scenes
+            "Children's Book Illustration": "landscape_4_3",  # Traditional book format
+            "Concept Art": "landscape_16_9"           # Wide, dramatic compositions
+        }
+        
+        return style_mappings.get(art_style, "landscape_4_3")  # Default fallback
+
     async def generate_story_rough_sketch(self, user_prompt: str, genre: str, tone: str, num_scenes: int, 
                                         user_character_desc: Optional[str] = None, 
                                         user_setting_desc: Optional[str] = None) -> str:
@@ -281,6 +299,11 @@ class FALService:
             if art_style and art_style != "Digital Painting":
                 image_prompt = f"{image_prompt} in {art_style} style"
 
+            # Get optimal image size for the art style
+            optimal_size = self.get_optimal_image_size(art_style)
+            
+            logger.info(f"Using image size: {optimal_size} for art style: {art_style}")
+
             # Call FAL API to generate image
             def on_queue_update_for_scene(update):
                 self.on_queue_update(update, scene_index)
@@ -289,12 +312,11 @@ class FALService:
                 "fal-ai/flux/schnell",
                 arguments={
                     "prompt": image_prompt,
-                    "image_size": {
-                        "width": settings.IMAGE_WIDTH,
-                        "height": settings.IMAGE_HEIGHT
-                    },
+                    "image_size": optimal_size,  # Use enum value instead of custom dimensions
                     "num_inference_steps": settings.DIFFUSION_STEPS,
-                    "seed": 42 + scene_index  # Use different seeds for variation
+                    "seed": 42 + scene_index,  # Use different seeds for variation
+                    "num_images": 1,
+                    "enable_safety_checker": True
                 },
                 with_logs=True,
                 on_queue_update=on_queue_update_for_scene
@@ -303,7 +325,9 @@ class FALService:
             # Process image
             if result and 'images' in result and len(result['images']) > 0:
                 image_url = result['images'][0]['url']
-                logger.debug(f"Image URL: {image_url}")
+                image_width = result['images'][0].get('width', 'unknown')
+                image_height = result['images'][0].get('height', 'unknown')
+                logger.info(f"Generated image: {image_url} ({image_width}x{image_height})")
                 return image_url
             else:
                 logger.error(f"No images returned in the FAL AI response")
@@ -317,7 +341,8 @@ class FALService:
         """Generate a full story with images using the four-step process"""
         try:
             num_scenes = prompt.numScenes if hasattr(prompt, 'numScenes') else self.default_num_scenes
-            logger.info(f"Generating story with {prompt.numScenes} scenes")
+            logger.info(f"Generating story with {num_scenes} scenes")
+            
             # Step 1: Generate the story rough sketch
             story_sketch = await self.generate_story_rough_sketch(
                 prompt.idea,
